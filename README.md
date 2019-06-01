@@ -4,3 +4,14 @@
 
 ![wireframe-part1](/assets/IMG_3203.jpeg)
 ![wireframe-part2](/assets/IMG_3204.jpeg)
+
+
+### calculate a bicycle journey
+
+##### use date object to find time to destination, race against previous times
+### user can create and edit user info.  image of bike array of favorite routes
+
+### stretch goals
+- connect user to routes models
+- user login
+- stretch goals  use google distance matrix api and geolocation and geocoding api
