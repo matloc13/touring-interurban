@@ -8,8 +8,14 @@
 
 ### calculate a bicycle journey
 
-##### use date object to find time to destination, race against previous times
-### user can create and edit user info.  image of bike array of favorite routes
+- use date object to find time to destination, race against previous times
+- user can create and edit user info.  image of bike array of favorite routes
+
+
+### routes object
+- time to of trip
+- beginning and ending of trip
+- description of the trip
 
 ### stretch goals
 - connect user to routes models

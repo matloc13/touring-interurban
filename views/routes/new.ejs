@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <nav>
+
+    </nav>
+    <form class="newRoute" action="/routes" method="POST">
+      <fieldset>
+        <label for="origin"></label>
+        <input type="text" name="origin" placeholder="origin position" id="origin"/>
+        <label for="destination"></label>
+        <input type="text" name="destination" placeholder="destination" id="destination"/>
+      </fieldset>
+      <fieldset>
+        <input type="submit" value="Start"/>
+      </fieldset>
+
+    </form>
+
+  </body>
+</html>
