@@ -4,15 +4,16 @@
     <% include ../partials/head %>
   </head>
   <body>
+    <a href="/trips/<%= trip.id %>/edit">edit</a>
+
     <ul>
       <li>From: <%= trip.origin %></li>
       <li>To: <%= trip.destination %></li>
     </ul>
      <% let time = trip.updatedAt - trip.createdAt %>
      <% time = Math.floor(time/1000);%>
-     <h2>yourtime: <%= time %></h2>
+     <h2>Your Time: <%= time %> seconds</h2>
      <p><%= trip.description %></p>
-
 
   </body>
 </html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li><%= trip.origin %></li>
+      <li><%= trip.destination %></li>
+      <li><%= trip.yourTime %></li>
+    </ul>
+    <form class="editForm" action="trips/<%= trip.id %>/edit$_method=PUT" method="POST">
+      <fieldset>
+        <textarea name="description"></textarea>
+      </fieldset>
+      <input type="submit" value="publish">
+    </form>
+  </body>
+</html>
