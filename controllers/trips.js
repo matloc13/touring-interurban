@@ -24,15 +24,18 @@ router.post('/', (req, res) => {
 
 });
 
-// router.put('/:id', (req, res) => {
-//   Route.findByIdAndUpdate(req.params.id, req.body, {
-//       new: true
-//     },
-//     (err, stopTime) => {
-//       res.render('trips/show.ejs', {
-//         trip: stopTime
-//       });
-//     })
-// });
+router.put('/:id', (req, res) => {
+  Trip.findByIdAndUpdate(req.params.id, req.body, {
+      $set: {
+        yourTime: 1
+      }
+    },
+    (err, stopTime) => {
+      // res.send(stopTime)
+      res.render('trips/show.ejs', {
+        trip: stopTime
+      });
+    })
+});
 
 module.exports = router

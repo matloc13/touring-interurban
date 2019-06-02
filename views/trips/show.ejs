@@ -5,6 +5,9 @@
     <title></title>
   </head>
   <body>
+     <% let time = trip.updatedAt - trip.createdAt %>
+     <% time = Math.floor(time/1000);%>
+     yourtime: <%= time %>
 
   </body>
 </html>
