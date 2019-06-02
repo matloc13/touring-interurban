@@ -7,10 +7,11 @@ const mongoose = require('mongoose');
 const mongoURI = 'mongodb://localhost:27017/touring';
 
 // config
-const methodOverride = require('method-override')
+
 require('dotenv').config();
 
-const routesController = require('./controllers/routes')
+const methodOverride = require('method-override')
+const tripsController = require('./controllers/trips')
 
 // mongoose connect
 mongoose.connection.once('open', () => {
@@ -24,13 +25,18 @@ mongoose.connect(mongoURI, {
 
 // middleware
 
-app.use(methodOverride('_method'));
+
 app.use(express.urlencoded({
-  extended: true
+  extended: false
 }));
 app.use(express.json());
 app.use(express.static('public'));
-app.use('/routes', routesController);
+app.use(methodOverride('_method'));
+
+app.use('/trips', tripsController);
+
+
+//routes
 
 app.get('/', (req, res) => {
   res.render('index.ejs');

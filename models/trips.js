@@ -4,16 +4,18 @@ const routeSchema = new mongoose.Schema({
   username: String,
   origin: {
     type: String,
-    required: true
+    required: false
   },
   destination: String,
   startTime: Date,
   stopTime: Date,
   yourTime: Number
 
+}, {
+  timestamps: true
 });
 
 
-const Route = mongoose.model('Route', routeSchema);
+const Trip = mongoose.model('Trip', routeSchema);
 
-module.exports.Route = Route;
+module.exports = Trip;
