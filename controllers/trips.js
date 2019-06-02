@@ -16,7 +16,9 @@ router.post('/', (req, res) => {
       console.log('something is not rtihr');
     } else {
       console.log(newRoute);
-      res.redirect('/');
+      res.render('trips/progress.ejs', {
+        trip: newRoute
+      });
     }
   });
 
