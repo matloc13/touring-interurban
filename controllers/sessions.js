@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcrypt');
 
 const User = require('../models/users')
 
@@ -12,7 +13,7 @@ router.post('/', (req, res) => {
   User.findOne({
     username: req.body.username
   }, (err, user) => {
-    if (req.body.password === user.password) {
+    if (bcrypt.compareSync(req.body.password, user.password)) {
       req.session.currentUser = user;
       res.redirect('/');
     } else {
