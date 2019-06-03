@@ -7,9 +7,8 @@ const routeSchema = new mongoose.Schema({
     required: false
   },
   destination: String,
-  startTime: Date,
-  stopTime: Date,
-  yourTime: Number
+  yourTime: Number,
+  description: String
 
 }, {
   timestamps: true

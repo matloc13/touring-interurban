@@ -4,18 +4,25 @@
     <% include ../partials/head %>
   </head>
   <body>
+    <% let time = trip.updatedAt - trip.createdAt %>
+    <% time = Math.floor(time/1000);%>
     <ul>
       <li><%= trip.origin %></li>
       <li><%= trip.destination %></li>
-      <li><%= trip.yourTime %></li>
+      <li><%= time %> seconds</li>
     </ul>
+
     <form class="editForm" action="/trips/<%= trip.id %>/edit?_method=PUT" method="POST">
       <fieldset>
-        <input type="hidden" name="" value="<%= trip.origin %>"/>
-        <input type="hidden" name="" value="<%= trip.destination %>"/>
-        <input type="hidden" name="" value="<%= trip.yourTime %>">
-        <textarea name="description"></textarea>
-      </fieldset>
+        <legend>Route Information</legend>
+          <input type="hidden" name="origin" value="<%= trip.origin %>"/>
+          <input type="hidden" name="destination" value="<%= trip.destination %>"/>
+          <input type="hidden" name="yourTime" value="<%= time %>"/>
+        </fieldset>
+        <fieldset>
+          <legend>Describe Your Ride</legend>
+          <textarea name="description"></textarea>
+        </fieldset>
       <input type="submit" value="publish">
     </form>
   </body>
