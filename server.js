@@ -10,8 +10,9 @@ const mongoURI = 'mongodb://localhost:27017/touring';
 
 require('dotenv').config();
 
-const methodOverride = require('method-override')
-const tripsController = require('./controllers/trips')
+const methodOverride = require('method-override');
+const tripsController = require('./controllers/trips');
+const usersController = require('./controllers/users');
 
 // mongoose connect
 mongoose.connection.once('open', () => {
@@ -33,7 +34,9 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 
+app.use('/users', usersController);
 app.use('/trips', tripsController);
+
 
 
 //routes
