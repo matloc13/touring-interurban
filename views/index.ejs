@@ -4,12 +4,35 @@
     <% include partials/head %>
   </head>
   <body>
-    <h1>Welcome!</h1>
+    <h1>
+    <% if (currentUser) { %>
+      Let's Ride <%= currentUser.username %> !
+    <%} else {%>
+      Welcome!
+    <%}%>
+    </h1>
     <nav>
       <ul>
-        <li><a href="/sessions/new">Log In</a></li>
-        <li><a href="/users/new">Register</a></li>
+        <% if (!currentUser){ %>
+          <li><a href="/sessions/new">Log In</a></li>
+          <li><a href="/users/new">Register</a></li>
+        <% } %>
+
+        <% if (currentUser) { %>
+          <li>
+            <form class="logoutbtn" action="/sessions?_method=DELETE" method="POST">
+              <input type="submit" value="Logout">
+            </form>
+          </li>
+        <%}%>
+
       </ul>
     </nav>
+<% if (currentUser) { %>
+  <main>
+    Welcome to touring interurban!  <a href="/trips">Let's Begin</a>
+  </main>
+<% } %>
+
   </body>
 </html>
