@@ -10,7 +10,9 @@ const Trip = require('../models/trips');
 // index of trips
 router.get('/', (req, res) => {
   if (req.session.currentUser) {
-    res.render('trips/index.ejs');
+    res.render('trips/index.ejs', {
+      currentUser: req.session.currentUser
+    });
   } else {
     res.redirect('/sessions/new');
   }
@@ -20,7 +22,9 @@ router.get('/', (req, res) => {
 // new trip
 
 router.get('/new', (req, res) => {
-  res.render('trips/new.ejs');
+  res.render('trips/new.ejs', {
+    currentUser: req.session.currentUser
+  });
 });
 
 // start trip

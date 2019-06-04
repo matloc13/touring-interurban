@@ -7,6 +7,7 @@
     <% let time = trip.updatedAt - trip.createdAt %>
     <% time = Math.floor(time/1000);%>
     <ul>
+      <li><%= Trip.username %></li>
       <li><%= trip.origin %></li>
       <li><%= trip.destination %></li>
       <li><%= time %> seconds</li>

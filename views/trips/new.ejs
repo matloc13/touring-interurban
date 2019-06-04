@@ -8,6 +8,7 @@
 
     </nav>
     <form class="newRoute" action="/trips" method="POST">
+      <input type="hidden" name="username" value="<%= currentUser.username %>">
       <fieldset>
         <label for="origin">
         <input type="text" name="origin" placeholder="origin position" id="origin"/>
