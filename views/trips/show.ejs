@@ -4,9 +4,10 @@
     <% include ../partials/head %>
   </head>
   <body>
-    <a href="/trips/<%= trip.id %>/edit">edit</a>
+    <a href="/trips/<%= trip.id %>/edit">add a description</a>
 
     <ul>
+      <li><%= trip.username %></li>
       <li>From: <%= trip.origin %></li>
       <li>To: <%= trip.destination %></li>
     </ul>

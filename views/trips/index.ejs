@@ -8,10 +8,25 @@
     <nav>
 
     </nav>
-    <button type="button" name="button"><a href="/trips/new">Let's Begin</a></button>
+    <button type="button" name="button"><a href="/trips/new">Let's Ride</a></button>
 
     <ul>
+    <%  trip.forEach((ele, index)=>{ %>
+    <li>
+      <div class="tripItem">
+       <div class="tripItemValue">
+        <strong>Your Time</strong>  <%= ele.yourTime %>
+       </div>
+       <div class="tripItemValue">
+        <strong>Origin</strong>  <%= ele.origin %>
+       </div>
+       <div class="tripItemValue">
+        <strong>Destination</strong>  <%= ele.destination %>
+       </div>
+     </div>
+    </li>
 
+      <%})%>
     </ul>
   </body>
 </html>

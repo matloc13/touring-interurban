@@ -1,0 +1,16 @@
+li {
+  list-style: none;
+}
+
+.tripItem {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 3%;
+  margin: 1%;
+}
+.tripItem .tripItemValue {
+  padding: 2%;
+}
+
+/*# sourceMappingURL=style.css.map */

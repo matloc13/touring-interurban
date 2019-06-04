@@ -6,16 +6,19 @@ const Trip = require('../models/trips');
 
 //routes
 
-
 // index of trips
 router.get('/', (req, res) => {
-  if (req.session.currentUser) {
-    res.render('trips/index.ejs', {
-      currentUser: req.session.currentUser
-    });
-  } else {
-    res.redirect('/sessions/new');
-  }
+  Trip.find({}, (err, trips) => {
+    if (req.session.currentUser) {
+      res.render('trips/index.ejs', {
+        currentUser: req.session.currentUser,
+        trip: trips
+      });
+    } else {
+      res.redirect('/sessions/new');
+    }
+  })
+
 
 });
 
@@ -79,13 +82,8 @@ router.put('/:id/edit', (req, res) => {
 // stop current trip
 
 router.put('/:id', (req, res) => {
-  // let time = req.params.updatedAt - req.params.createdAt;
-  // time = Math.floor(time / 1000);
-  // console.log(time);
+
   Trip.findByIdAndUpdate(req.params.id, req.body, {
-      // $set: {
-      //   yourTime: 30
-      // }
       new: true
     },
     (err, stopTime) => {
@@ -95,8 +93,6 @@ router.put('/:id', (req, res) => {
       });
     })
 });
-
-
 
 
 

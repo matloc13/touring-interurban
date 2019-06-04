@@ -1,0 +1,28 @@
+// table {
+//   border:1px solid black;
+//   th  {
+//     border:2px solid gray;
+//   }
+//   td {
+//   border:1px solid black;
+//   }
+// }
+li {
+  list-style: none;
+}
+
+//Index
+
+.tripItem {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 3%;
+  margin:1%;
+
+  .tripItemValue {
+    padding:2%;
+
+
+  }
+}

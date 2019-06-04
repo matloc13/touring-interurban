@@ -7,20 +7,17 @@
     <% let time = trip.updatedAt - trip.createdAt %>
     <% time = Math.floor(time/1000);%>
     <ul>
-      <li><%= Trip.username %></li>
+      <li><%= trip.username %></li>
       <li><%= trip.origin %></li>
       <li><%= trip.destination %></li>
       <li><%= time %> seconds</li>
     </ul>
 
     <form class="editForm" action="/trips/<%= trip.id %>/edit?_method=PUT" method="POST">
-      <fieldset>
-        <legend>Route Information</legend>
+        <fieldset>
           <input type="hidden" name="origin" value="<%= trip.origin %>"/>
           <input type="hidden" name="destination" value="<%= trip.destination %>"/>
           <input type="hidden" name="yourTime" value="<%= time %>"/>
-        </fieldset>
-        <fieldset>
           <legend>Describe Your Ride</legend>
           <textarea name="description"></textarea>
         </fieldset>
