@@ -4,10 +4,16 @@
     <% include ../partials/head %>
   </head>
   <body>
+    <div class="container">
+
+
     <nav>
-      <% include ../partials/nav %>
+      <ul>
+        <li><a href="/trips/<%= trip.id %>/edit">add a description</a></li>
+      </ul>
+
     </nav>
-    <a href="/trips/<%= trip.id %>/edit">add a description</a>
+
 
     <ul>
       <li><%= trip.username %></li>
@@ -19,6 +25,8 @@
      <h2>Your Time: <%= time %> seconds</h2>
      <h3><%=trip.yourTime %></h3>
      <p><%= trip.description %></p>
+
+     </div>
 
   </body>
 </html>

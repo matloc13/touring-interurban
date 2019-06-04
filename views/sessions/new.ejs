@@ -5,13 +5,22 @@
   </head>
   <body>
     <h1>SIGN IN RIDER</h1>
+    <nav>
+      <ul>
+
+
+    <li>
+    <button type="button" name="button"><a href="/users/new.ejs">Register</a> </button>
+    </li>
+    </ul>
+    </nav>
 
     <form class="signInForm" action="/sessions" method="POST">
       <fieldset>
         <label for="username">Username</label>
         <input type="text" name="username" id="username" placeholder="username">
         <label for="password">Password</label>
-        <input type="text" name="password" id="password" id="password">
+        <input type="password" name="password" id="password" id="password">
           <input type="submit"value="sign in">
       </fieldset>
 

@@ -10,6 +10,15 @@ $primary-shadow: #7f1f14;
 li {
   list-style: none;
 }
+button {
+  border-radius: 0;
+  box-shadow: -2px 3px $primary-shadow;
+  text-transform: none;
+}
+
+a {
+  text-decoration: none;
+}
 // nav
 
 nav {
@@ -17,6 +26,8 @@ nav {
   background-color:$primary-color;
   .navtbtn {
     margin:0 3%;
+    border-radius: 0;
+
 
     // display: inline-block;
   }
@@ -30,16 +41,20 @@ nav {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    margin:0 3%;
   }
 
   li {
     align-self: baseline;
-    // display: inline-block;
-    // margin:0 10px;
     padding:3% .5%;
-    form input{
-    align-self: baseline;
-    color:$dark-text;
+
+    input[type=submit] {
+      border-radius: 0;
+      color:$dark-text;
+      text-transform: none;
+      margin-right: 10%;
+      box-shadow: -2px 3px $primary-shadow;
+      align-self: baseline;
     }
   }
 
@@ -64,16 +79,19 @@ nav {
 
   .tripItemValue {
     padding:2%;
-
+    color:$dark-text;
+    text-overflow: clip;
 
   }
+
 }
 
 .ridebtn {
-  margin:10px 0;
+  margin:10px 0 3px 10px;
+  // top:-10;
   a {
     color:$dark-text;
-    text-decoration: none;
+
   }
 }
 
