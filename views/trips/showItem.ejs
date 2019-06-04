@@ -6,17 +6,18 @@
   <body>
     <nav>
       <% include ../partials/nav %>
-      <a href="/trips/<%= trip.id %>/edit" class="navtbtn">edit tale</a>
-      <a href="/trips" class="navtbtn">home</a>
+
     </nav>
 
 
     <ul>
       <li>
+
       <h3>Name: <%= trip.username %></h3>
       <h3>Time: <%= trip.yourTime %> seconds</h3>
       <h5>From: <%= trip.origin %></h5>
       <h5>To: <%= trip.destination %></h5>
+      <a href="/trips/<%= trip.id %>/edit" class="navtbtn">edit tale</a>
     </li>
     </ul>
 

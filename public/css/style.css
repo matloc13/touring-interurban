@@ -20,9 +20,6 @@ li {
 }
 
 nav {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row-reverse;
   background-color: #B22E20;
 }
 nav .navtbtn {
@@ -30,6 +27,18 @@ nav .navtbtn {
 }
 nav a {
   align-self: center;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+}
+nav li {
+  align-self: baseline;
+  padding: 3% 2%;
+}
+nav li form {
+  align-self: baseline;
 }
 
 .indexNavWrap {
@@ -46,6 +55,10 @@ nav a {
 }
 .tripItem .tripItemValue {
   padding: 2%;
+}
+
+.arrived input {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

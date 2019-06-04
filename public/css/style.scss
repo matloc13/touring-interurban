@@ -1,16 +1,9 @@
 
 @import 'reset';
+
+// colors
+
 $primary-color: #B22E20;
-
-
-.clearfix:after{
-  visibility: hidden;
-  display: block;
-  font-size: 0;
-  content: " ";
-  clear: both;
-  height: 0;
-}
 
 li {
   list-style: none;
@@ -18,24 +11,41 @@ li {
 // nav
 
 nav {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row-reverse;
+
   background-color:$primary-color;
   .navtbtn {
     margin:0 3%;
+    // display: inline-block;
   }
   a {
     align-self: center;
   }
+  ul {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+  }
+
+  li {
+    align-self: baseline;
+    // display: inline-block;
+    // margin:0 10px;
+    padding:3% 2%;
+    form{
+    align-self: baseline;
+    }
+  }
+
 }
+
+
+
+//Index
 
 .indexNavWrap {
   position: sticky;
   top:0;
 }
-
-//Index
 
 .tripItem {
   border: 1px solid red;
@@ -48,5 +58,15 @@ nav {
     padding:2%;
 
 
+  }
+}
+
+// progress
+.progWrap {
+  
+}
+.arrived {
+  input {
+    width:100%;
   }
 }
