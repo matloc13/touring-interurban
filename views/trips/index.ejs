@@ -5,14 +5,20 @@
   </head>
   <body>
     <h1>Hello <%= currentUser.username %> </h1>
-    <nav>
+    <div class="indexNavWrap clearfix">
+      <nav class=" indexNav">
+        <% include ../partials/nav %>
+      </nav>
+    </div>
+    <div class="indexNavWrap clearfix">
+      <button type="button" name="button"><a href="/trips/new">Let's Ride</a></button>
+    </div>
 
-    </nav>
-    <button type="button" name="button"><a href="/trips/new">Let's Ride</a></button>
 
     <ul>
     <%  trip.forEach((ele, index)=>{ %>
     <li>
+      <a href="/trips/<%= ele.id %>/show">
       <div class="tripItem">
        <div class="tripItemValue">
         <strong>Your Time</strong>  <%= ele.yourTime %>
@@ -24,6 +30,7 @@
         <strong>Destination</strong>  <%= ele.destination %>
        </div>
      </div>
+     </a>
     </li>
 
       <%})%>

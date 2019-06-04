@@ -61,6 +61,21 @@ router.get('/:id/edit', (req, res) => {
   })
 });
 
+// show trip
+
+router.get('/:id/show', (req, res) => {
+  Trip.findById(req.params.id, req.body, (err, tripItem) => {
+    if (err) {
+      console.log('cannot find trip');
+    } else {
+      res.render('trips/showItem.ejs', {
+        trip: tripItem,
+        currentUser: req.session.currentUser
+      });
+    }
+  })
+});
+
 // save trip
 
 router.put('/:id/edit', (req, res) => {

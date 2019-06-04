@@ -1,5 +1,40 @@
+html,
+body,
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
 li {
   list-style: none;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  background-color: #B22E20;
+}
+nav .navtbtn {
+  margin: 0 3%;
+}
+nav a {
+  align-self: center;
+}
+
+.indexNavWrap {
+  position: sticky;
+  top: 0;
 }
 
 .tripItem {

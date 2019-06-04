@@ -1,14 +1,38 @@
-// table {
-//   border:1px solid black;
-//   th  {
-//     border:2px solid gray;
-//   }
-//   td {
-//   border:1px solid black;
-//   }
-// }
+
+@import 'reset';
+$primary-color: #B22E20;
+
+
+.clearfix:after{
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
 li {
   list-style: none;
+}
+// nav
+
+nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
+  background-color:$primary-color;
+  .navtbtn {
+    margin:0 3%;
+  }
+  a {
+    align-self: center;
+  }
+}
+
+.indexNavWrap {
+  position: sticky;
+  top:0;
 }
 
 //Index

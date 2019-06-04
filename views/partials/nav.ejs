@@ -1,0 +1,15 @@
+<ul>
+  <% if (!currentUser){ %>
+    <li><a href="/sessions/new" class="navtbtn">Log In</a></li>
+    <li><a href="/users/new" class="navtbtn">Register</a></li>
+  <% } %>
+
+  <% if (currentUser) { %>
+    <li>
+      <form class="navtbtn" action="/sessions?_method=DELETE" method="POST">
+        <input type="submit" value="Logout">
+      </form>
+    </li>
+  <%}%>
+
+</ul>
