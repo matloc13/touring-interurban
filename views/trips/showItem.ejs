@@ -9,15 +9,20 @@
 
     </nav>
 
-
     <ul>
       <li>
-
+        <img src="<%= currentUser.img %>" alt="">
       <h3>Name: <%= trip.username %></h3>
       <h3>Time: <%= trip.yourTime %> seconds</h3>
       <h5>From: <%= trip.origin %></h5>
       <h5>To: <%= trip.destination %></h5>
-      <a href="/trips/<%= trip.id %>/edit" class="navtbtn">edit tale</a>
+      <% if (currentUser.username === trip.username) { %>
+        <a href="/trips/<%= trip.id %>/edit" class="navtbtn">edit tale</a>
+        <form class="" action="/trips/<%= trip.id %>?_method=DELETE" method="POST">
+          <input type="submit" value="remove route">
+        </form>
+      <%}%>
+
     </li>
     </ul>
 

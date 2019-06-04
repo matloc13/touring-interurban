@@ -26,19 +26,22 @@ nav .navtbtn {
   margin: 0 3%;
 }
 nav a {
-  align-self: center;
+  align-self: baseline;
+  color: #f2f0ef;
+  text-decoration: none;
 }
 nav ul {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: row-reverse;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 nav li {
   align-self: baseline;
-  padding: 3% 2%;
+  padding: 3% 0.5%;
 }
-nav li form {
+nav li form input {
   align-self: baseline;
+  color: #302e2d;
 }
 
 .indexNavWrap {
@@ -55,6 +58,14 @@ nav li form {
 }
 .tripItem .tripItemValue {
   padding: 2%;
+}
+
+.ridebtn {
+  margin: 10px 0;
+}
+.ridebtn a {
+  color: #302e2d;
+  text-decoration: none;
 }
 
 .arrived input {

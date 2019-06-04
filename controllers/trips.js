@@ -104,9 +104,20 @@ router.put('/:id', (req, res) => {
     (err, stopTime) => {
       // res.send(stopTime)
       res.render('trips/show.ejs', {
-        trip: stopTime
+        trip: stopTime,
+        currentUser: req.session.currentUser
       });
     })
+});
+
+router.delete('/:id', (req, res) => {
+  Trip.findByIdAndRemove(req.params.id, (err, trip) => {
+    if (err) {
+      console.log('could not delete');
+    } else {
+      res.redirect('/trips');
+    }
+  })
 });
 
 
