@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-const mongoosePaginate = require('mongoose-Paginate-v2');
 
 const routeSchema = new mongoose.Schema({
   username: String,
@@ -15,7 +14,7 @@ const routeSchema = new mongoose.Schema({
   timestamps: true
 });
 
-routeSchema.plugin(mongoosePaginate);
+
 
 const Trip = mongoose.model('Trip', routeSchema);
 
