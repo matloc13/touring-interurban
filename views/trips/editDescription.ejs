@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+
+    <form class="editDescription" action="/<%= trip.id %>?_method=PUT" method="POST">
+      <fieldset>
+        <input type="hidden" name="origin" value="<%= trip.origin %>"/>
+        <input type="hidden" name="destination" value="<%= trip.destination %>"/>
+        <input type="hidden" name="yourTime" value="<%= trip.yourTime %>"/>
+        <textarea name="description"></textarea>
+        <input type="submit" name="" value="Publish">
+      </fieldset>
+
+    </form>
+
+  </body>
+</html>
