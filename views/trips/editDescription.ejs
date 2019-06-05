@@ -5,7 +5,7 @@
   </head>
   <body>
 
-    <form class="editDescription" action="/<%= trip.id %>?_method=PUT" method="POST">
+    <form class="editDescription" action="/trips/<%= trip.id %>/edit/description?_method=PUT" method="POST">
       <fieldset>
         <input type="hidden" name="origin" value="<%= trip.origin %>"/>
         <input type="hidden" name="destination" value="<%= trip.destination %>"/>

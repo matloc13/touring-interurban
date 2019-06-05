@@ -17,7 +17,7 @@
       <h5>From: <%= trip.origin %></h5>
       <h5>To: <%= trip.destination %></h5>
       <% if (currentUser.username === trip.username) { %>
-        <a href="/trips/<%= trip.id %>/editDescription" class="navtbtn">edit tale</a>
+        <a href="/trips/<%= trip.id %>/edit/description" class="navtbtn">edit tale</a>
         <form class="" action="/trips/<%= trip.id %>?_method=DELETE" method="POST">
           <input type="submit" value="remove route">
         </form>
