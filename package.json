@@ -1,6 +1,9 @@
 {
   "name": "touring-interurban",
   "version": "1.0.0",
+  "engines": {
+   "node": "11.11.0"
+ },
   "description": "bicycle timer",
   "main": "server.js",
   "scripts": {

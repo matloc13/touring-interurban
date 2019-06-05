@@ -5,7 +5,7 @@ const session = require('express-session');
 
 // mongo
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://localhost:27017/touring';
+const mongoURI = process.env.MONGODB_URI;
 
 // config
 
@@ -35,7 +35,7 @@ app.use(express.json());
 app.use(express.static('public'));
 app.use(methodOverride('_method'));
 app.use(session({
-  secret: process.env.SEC,
+  secret: process.env.SECRET,
   resave: false,
   saveUninitialized: false
 }));
