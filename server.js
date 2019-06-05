@@ -5,7 +5,8 @@ const session = require('express-session');
 
 // mongo
 const mongoose = require('mongoose');
-const mongoURI = 'mongodb://localhost:27017/touring';
+const mongoURI = process.env.MONGODB_URI ||
+  'mongodb://localhost/touring';
 
 // config
 
