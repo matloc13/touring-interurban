@@ -49,10 +49,22 @@ router.post('/', (req, res) => {
 
 // edit trip description
 
-router.get('/:id/edit', (req, res) => {
+router.get('/:id/edit/description', (req, res) => {
   Trip.findById(req.params.id, req.body, (err, trip) => {
     if (err) {
       console.log('cannot find');
+    } else {
+      res.render('trips/editDescription.ejs', {
+        trip: trip
+      });
+    }
+  })
+});
+
+router.get('/:id/edit', (req, res) => {
+  Trip.findById(req.params.id, req.body, (err, trip) => {
+    if (err) {
+      res.send('did not save');
     } else {
       res.render('trips/edit.ejs', {
         trip: trip
@@ -76,6 +88,23 @@ router.get('/:id/show', (req, res) => {
   })
 });
 
+// edit prevoius trip description
+
+router.put('/:id/edit/description', (req, res) => {
+  Trip.findByIdAndUpdate(req.params.id, req.body, {
+    $set: {
+      description: req.params.description
+    }
+  }, (err, tripDescription) => {
+    if (err) {
+      res.send('did not update')
+    } else {
+      res.redirect('/trips');
+    }
+
+  })
+});
+
 // save trip
 
 router.put('/:id/edit', (req, res) => {
@@ -84,7 +113,7 @@ router.put('/:id/edit', (req, res) => {
       description: req.params.description,
       yourTime: req.param.yourTime
     }
-  }, (err, tripDescription) => {
+  }, (err, trip) => {
     if (err) {
       console.log('not saved');
     } else {
