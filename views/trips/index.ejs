@@ -22,7 +22,7 @@
       <div class="tripItem">
        <div class="tripItemValue">
         <strong><%= ele.username %>'s time</strong>
-        <span class='indexTime'><%= ele.yourTime %></span>
+        <span><%= moment(ele.yourTime).format('HH:mm:ss') %></span>
        </div>
        <div class="tripItemValue">
         <strong>Origin</strong>  <%= ele.origin %>
