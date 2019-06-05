@@ -6,11 +6,12 @@
   <body>
     <% let time = trip.updatedAt - trip.createdAt %>
     <% time = Math.floor(time/1000);%>
+    <!-- <% timeshow = time %> -->
     <ul>
       <li><%= trip.username %></li>
       <li><%= trip.origin %></li>
       <li><%= trip.destination %></li>
-      <li><%= time %> seconds</li>
+      <li class="yourTime"><%= timeshow %></li>
     </ul>
 
     <form class="editForm" action="/trips/<%= trip.id %>/edit?_method=PUT" method="POST">

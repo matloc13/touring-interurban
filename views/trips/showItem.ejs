@@ -11,9 +11,9 @@
 
     <ul>
       <li>
-        <img src="<%= currentUser.img %>" alt="">
+        
       <h3>Name: <%= trip.username %></h3>
-      <h3>Time: <%= trip.yourTime %> seconds</h3>
+      <h3 class="yourTime"> <%= trip.yourTime %> </h3>
       <h5>From: <%= trip.origin %></h5>
       <h5>To: <%= trip.destination %></h5>
       <% if (currentUser.username === trip.username) { %>

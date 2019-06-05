@@ -4,7 +4,7 @@
     <% include ../partials/head %>
   </head>
   <body>
-    <div class="container">
+
 
 
     <nav>
@@ -13,7 +13,7 @@
       </ul>
 
     </nav>
-
+<div class="container">
 
     <ul>
       <li><%= trip.username %></li>
@@ -22,8 +22,10 @@
     </ul>
      <% let time = trip.updatedAt - trip.createdAt %>
      <% time = Math.floor(time/1000);%>
-     <h2>Your Time: <%= time %> seconds</h2>
-     <h3><%=trip.yourTime %></h3>
+
+     <span>Your Time:</span>
+     <h2 class="yourTime"> <%= time %> </h2><span>seconds</span>
+     <h3 ><%=trip.yourTime %></h3>
      <p><%= trip.description %></p>
 
      </div>
