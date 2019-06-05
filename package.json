@@ -2,8 +2,8 @@
   "name": "touring-interurban",
   "version": "1.0.0",
   "engines": {
-   "node": "11.11.0"
- },
+    "node": "11.11.0"
+  },
   "description": "bicycle timer",
   "main": "server.js",
   "scripts": {
@@ -27,7 +27,6 @@
     "express": "^4.17.1",
     "express-session": "^1.16.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.5.11",
-    "mongoose-paginate-v2": "^1.3.0"
+    "mongoose": "^5.5.11"
   }
 }
