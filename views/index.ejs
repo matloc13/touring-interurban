@@ -4,6 +4,11 @@
     <% include partials/head %>
   </head>
   <body>
+
+
+<div class="showtitle">
+
+
     <h6>
     <% if (currentUser) { %>
       Let's Ride <%= currentUser.username %> !
@@ -11,14 +16,16 @@
       Welcome to touring urban
     <%}%>
   </h6>
+  </div>
     <nav>
       <% include partials/nav %>
     </nav>
+    <div class="welcomeBack">
 <% if (currentUser) { %>
   <main>
     Welcome to touring interurban!  <a href="/trips">Let's Begin</a>
   </main>
 <% } %>
-
+</div>
   </body>
 </html>

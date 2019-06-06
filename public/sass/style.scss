@@ -74,6 +74,26 @@ nav {
 
 }
 
+h6 {
+  margin:0;
+  padding:5px;
+
+}
+.showtitle {
+  background-color: $primary-color-light;
+  height:100%;
+  color:$light-text;
+}
+
+.welcomeBack {
+  width:100vw;
+  height:90vh;
+  background-image: url(https://live.staticflickr.com/2815/13740757384_8be0ae27e7_b.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: .4;
+
+}
 
 
 //Index
@@ -85,8 +105,9 @@ nav {
 
 .index {
   display: grid;
-  grid-template-columns: 1fr 3fr .5fr;
+  grid-template-columns: 2fr 6fr .1fr;
   width: 100%;
+
 }
 
 
