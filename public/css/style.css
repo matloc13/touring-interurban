@@ -25,7 +25,6 @@ li {
 }
 
 button {
-  border-radius: 0;
   box-shadow: -2px 3px #711d14;
   text-transform: none;
 }
@@ -40,6 +39,7 @@ nav {
 }
 nav .navtbtn {
   margin: 0 3%;
+  height: 60%;
 }
 nav a {
   align-self: baseline;
@@ -117,6 +117,10 @@ nav li input[type=submit] {
   height: 100%;
   background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
   background-size: cover;
+}
+
+.editRoute {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

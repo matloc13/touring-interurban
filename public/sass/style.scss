@@ -21,7 +21,7 @@ li {
   list-style: none;
 }
 button {
-  border-radius: 0;
+  // border-radius: 0;
   box-shadow: -2px 3px $primary-color-dark;
   text-transform: none;
 }
@@ -37,7 +37,7 @@ nav {
   .navtbtn {
     margin:0 3%;
     // border-radius: 0;
-
+  height:60%;
     // display: inline-block;
   }
   a {
@@ -144,4 +144,9 @@ nav {
   height:100%;
   background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
   background-size: cover;
+}
+
+.editRoute {
+  width:100%;
+
 }
