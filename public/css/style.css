@@ -82,10 +82,20 @@ h6 {
 .welcomeBack {
   width: 100vw;
   height: 90vh;
+  position: relative;
   background-image: url(https://live.staticflickr.com/2815/13740757384_8be0ae27e7_b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.4;
+}
+.welcomeBack .onTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 1;
+  width: 100%;
+  background-color: white;
 }
 
 .indexNavWrap {
@@ -127,6 +137,10 @@ h6 {
 
 .startBtn {
   margin-top: 25px;
+}
+
+.progWrap {
+  width: 100%;
 }
 
 .arrived input {
