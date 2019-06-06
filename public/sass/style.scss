@@ -1,15 +1,22 @@
 
 @import 'reset';
 
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,600&display=swap');
+
 // colors
 $light-text: #f2f0ef;
 $dark-text: #302e2d;
 $primary-color: #B22E20;
 $primary-color-light: lighten($primary-color, 15%);
 $primary-color-dark: darken($primary-color, 15%);
+$secondary-color: #827717;
+$secondary-color-light:lighten($secondary-color,35%);
 
+$primary-font: 'Dosis', sans-serif;
 
-
+body {
+  font-family: $primary-font;
+}
 li {
   list-style: none;
 }
@@ -25,11 +32,11 @@ a {
 // nav
 
 nav {
-
-  background-color:$primary-color;
+  font-family: $primary-font;
+  background-color: $primary-color;
   .navtbtn {
     margin:0 3%;
-    border-radius: 0;
+    // border-radius: 0;
 
     // display: inline-block;
   }
@@ -45,13 +52,18 @@ nav {
     flex-direction: row;
     margin:0 3%;
   }
+  .hi {
+    display: inline-flex;
+    margin:7px;
+
+  }
 
   li {
     align-self: baseline;
     padding:3% .5%;
 
     input[type=submit] {
-      border-radius: 0;
+      // border-radius: 0;
       color:$dark-text;
       text-transform: none;
       margin-right: 10%;
@@ -71,26 +83,42 @@ nav {
   top:0;
 }
 
+.index {
+  display: grid;
+  grid-template-columns: 1fr 3fr .5fr;
+  width: 100%;
+}
+
+
 
 .tripItem {
-  border: 1px solid red;
+  border: 1px solid $primary-color-dark;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 3%;
   margin:1%;
 
+
   .tripItemValue {
     padding:2%;
     color:$dark-text;
     text-overflow: clip;
+    // font-family: $primary-font;
+    font-weight: 600;
   }
+
+
+}
+.tripItem:hover {
+
+    background-color: $secondary-color-light;
 
 }
 
 .ridebtn {
   margin:10px 0 3px 10px;
   // top:-10;
-  width: 50%;
+  width: 100%;
   a {
     color:$dark-text;
 
@@ -108,4 +136,12 @@ nav {
   input {
     width:100%;
   }
+}
+
+// sidenavcontent
+
+.sidenavcontent {
+  height:100%;
+  background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
+  background-size: cover;
 }

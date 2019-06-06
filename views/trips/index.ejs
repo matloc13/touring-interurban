@@ -4,19 +4,26 @@
     <% include ../partials/head %>
   </head>
   <body>
-    <h1>Hello <%= currentUser.username %> </h1>
+  <h6>touring interurban</h6>
     <div class="indexNavWrap clearfix">
-      <nav class=" indexNav">
+      <nav class="  navbar">
+
         <% include ../partials/nav %>
       </nav>
     </div>
     <div class="indexNavWrap clearfix ridebtn">
       <button  class="startBtn" type="button" name="button"><a href="/trips/new">Let's Ride</a></button>
     </div>
+    <div class="index ">
+      <div class="sidnav">
+      <div class="sidenavcontent">
 
-    <ul>
+      </div>
+      </div>
+    <div class="listwrap">
+    <ul class="">
     <%  trip.forEach((ele, index)=>{ %>
-    <li>
+    <li class="collection-item">
       <a href="/trips/<%= ele.id %>/show">
       <div class="tripItem">
        <div class="tripItemValue">
@@ -29,10 +36,18 @@
        <div class="tripItemValue">
         <strong>Destination</strong>  <%= ele.destination %>
        </div>
+       <div class="sidenav">
+         <div class="sidenavcontent">
+
+         </div>
+       </div>
+
       </div>
       </a>
     </li>
       <%})%>
     </ul>
+  </div>
+  </div>
   </body>
 </html>

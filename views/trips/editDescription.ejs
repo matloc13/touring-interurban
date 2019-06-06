@@ -5,16 +5,21 @@
   </head>
   <body>
 
+<div class="container valign-wrapper">
+
+
     <form class="editDescription" action="/trips/<%= trip.id %>/edit/description?_method=PUT" method="POST">
       <fieldset>
         <input type="hidden" name="origin" value="<%= trip.origin %>"/>
         <input type="hidden" name="destination" value="<%= trip.destination %>"/>
         <input type="hidden" name="yourTime" value="<%= trip.yourTime %>"/>
-        <textarea name="description"></textarea>
+        <textarea name="description"><%= trip.description %></textarea>
         <input type="submit" name="" value="Publish">
       </fieldset>
 
     </form>
+
+    </div>
 
   </body>
 </html>

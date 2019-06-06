@@ -7,6 +7,9 @@
     <% let time = trip.updatedAt - trip.createdAt %>
     <% time = Math.floor(time/1000);%>
     <% timeshow = time %>
+    <div class="container valign-wrapper">
+
+
     <ul>
       <li><%= trip.username %></li>
       <li><%= trip.origin %></li>
@@ -24,5 +27,6 @@
         </fieldset>
       <input type="submit" value="publish">
     </form>
+    </div>
   </body>
 </html>

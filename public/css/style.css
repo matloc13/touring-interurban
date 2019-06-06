@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,600&display=swap");
 html,
 body,
 ul,
@@ -15,6 +16,10 @@ ol {
   height: 0;
 }
 
+body {
+  font-family: "Dosis", sans-serif;
+}
+
 li {
   list-style: none;
 }
@@ -30,11 +35,11 @@ a {
 }
 
 nav {
+  font-family: "Dosis", sans-serif;
   background-color: #B22E20;
 }
 nav .navtbtn {
   margin: 0 3%;
-  border-radius: 0;
 }
 nav a {
   align-self: baseline;
@@ -47,12 +52,15 @@ nav ul {
   flex-direction: row;
   margin: 0 3%;
 }
+nav .hi {
+  display: inline-flex;
+  margin: 7px;
+}
 nav li {
   align-self: baseline;
   padding: 3% 0.5%;
 }
 nav li input[type=submit] {
-  border-radius: 0;
   color: #302e2d;
   text-transform: none;
   margin-right: 10%;
@@ -65,8 +73,14 @@ nav li input[type=submit] {
   top: 0;
 }
 
+.index {
+  display: grid;
+  grid-template-columns: 1fr 3fr 0.5fr;
+  width: 100%;
+}
+
 .tripItem {
-  border: 1px solid red;
+  border: 1px solid #711d14;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 3%;
@@ -76,11 +90,16 @@ nav li input[type=submit] {
   padding: 2%;
   color: #302e2d;
   text-overflow: clip;
+  font-weight: 600;
+}
+
+.tripItem:hover {
+  background-color: #e4d767;
 }
 
 .ridebtn {
   margin: 10px 0 3px 10px;
-  width: 50%;
+  width: 100%;
 }
 .ridebtn a {
   color: #302e2d;
@@ -92,6 +111,12 @@ nav li input[type=submit] {
 
 .arrived input {
   width: 100%;
+}
+
+.sidenavcontent {
+  height: 100%;
+  background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
