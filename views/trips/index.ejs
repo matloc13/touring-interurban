@@ -11,9 +11,8 @@
       </nav>
     </div>
     <div class="indexNavWrap clearfix ridebtn">
-      <button type="button" name="button"><a href="/trips/new">Let's Ride</a></button>
+      <button  class="startBtn" type="button" name="button"><a href="/trips/new">Let's Ride</a></button>
     </div>
-
 
     <ul>
     <%  trip.forEach((ele, index)=>{ %>
@@ -30,10 +29,9 @@
        <div class="tripItemValue">
         <strong>Destination</strong>  <%= ele.destination %>
        </div>
-     </div>
-     </a>
+      </div>
+      </a>
     </li>
-
       <%})%>
     </ul>
   </body>

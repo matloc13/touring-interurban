@@ -5,14 +5,17 @@
 $light-text: #f2f0ef;
 $dark-text: #302e2d;
 $primary-color: #B22E20;
-$primary-shadow: #7f1f14;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+
+
 
 li {
   list-style: none;
 }
 button {
   border-radius: 0;
-  box-shadow: -2px 3px $primary-shadow;
+  box-shadow: -2px 3px $primary-color-dark;
   text-transform: none;
 }
 
@@ -28,12 +31,11 @@ nav {
     margin:0 3%;
     border-radius: 0;
 
-
     // display: inline-block;
   }
   a {
     align-self: baseline;
-    color:$light-text;
+    color:$primary-color-light;
     text-decoration: none;
 
   }
@@ -53,7 +55,7 @@ nav {
       color:$dark-text;
       text-transform: none;
       margin-right: 10%;
-      box-shadow: -2px 3px $primary-shadow;
+      box-shadow: -2px 3px $primary-color-dark;
       align-self: baseline;
     }
   }
@@ -81,7 +83,6 @@ nav {
     padding:2%;
     color:$dark-text;
     text-overflow: clip;
-
   }
 
 }
@@ -89,10 +90,14 @@ nav {
 .ridebtn {
   margin:10px 0 3px 10px;
   // top:-10;
+  width: 50%;
   a {
     color:$dark-text;
 
   }
+}
+.startBtn {
+  margin-top:25px;
 }
 
 // progress

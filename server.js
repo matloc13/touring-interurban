@@ -4,6 +4,7 @@ const app = express();
 const session = require('express-session');
 
 // mongo
+
 const mongoose = require('mongoose');
 const mongoURI = process.env.MONGODB_URI ||
   'mongodb://localhost/touring';
@@ -18,6 +19,7 @@ const usersController = require('./controllers/users');
 const sessionsController = require('./controllers/sessions');
 
 // mongoose connect
+
 mongoose.connection.once('open', () => {
   console.log(`connected to mongo`);
 });

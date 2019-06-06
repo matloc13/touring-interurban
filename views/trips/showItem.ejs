@@ -6,12 +6,10 @@
   <body>
     <nav>
       <% include ../partials/nav %>
-
     </nav>
 
     <ul>
       <li>
-
       <h3>Name: <%= trip.username %></h3>
       <h3 class="yourTime"> <%= trip.yourTime %> </h3>
       <h5>From: <%= trip.origin %></h5>
@@ -22,11 +20,9 @@
           <input type="submit" value="remove route">
         </form>
       <%}%>
-
     </li>
     </ul>
-
-
      <p><%= trip.description %></p>
+     
   </body>
 </html>

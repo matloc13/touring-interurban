@@ -21,7 +21,7 @@ li {
 
 button {
   border-radius: 0;
-  box-shadow: -2px 3px #7f1f14;
+  box-shadow: -2px 3px #711d14;
   text-transform: none;
 }
 
@@ -38,7 +38,7 @@ nav .navtbtn {
 }
 nav a {
   align-self: baseline;
-  color: #f2f0ef;
+  color: #dd5042;
   text-decoration: none;
 }
 nav ul {
@@ -56,7 +56,7 @@ nav li input[type=submit] {
   color: #302e2d;
   text-transform: none;
   margin-right: 10%;
-  box-shadow: -2px 3px #7f1f14;
+  box-shadow: -2px 3px #711d14;
   align-self: baseline;
 }
 
@@ -80,9 +80,14 @@ nav li input[type=submit] {
 
 .ridebtn {
   margin: 10px 0 3px 10px;
+  width: 50%;
 }
 .ridebtn a {
   color: #302e2d;
+}
+
+.startBtn {
+  margin-top: 25px;
 }
 
 .arrived input {
