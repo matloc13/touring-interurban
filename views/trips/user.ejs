@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body>
+    <nav>
+      <% include ../partials/nav %>
+    </nav>
+
+    <div class="topInfo">
+      <div class="infoTop">
+        <table>
+          <tr>
+            <th>Username</th>
+
+          </tr>
+          <tr>
+            <td><%= currentUser.username %></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <main>
+      <ul>
+
+      <% trip.forEach((ele, index)=> {%>
+        <li class="">
+
+          <div class="tripItem">
+           <div class="tripItemValue">
+            <strong><%= ele.username %>'s time</strong>
+            <span><%= ele.yourTime %></span>
+           </div>
+           <div class="tripItemValue">
+            <strong>Origin</strong>  <%= ele.origin %>
+           </div>
+           <div class="tripItemValue">
+            <strong>Destination</strong>  <%= ele.destination %>
+           </div>
+
+
+          </div>
+
+        </li>
+      <%})%>
+        </ul>
+    </main>
+  </body>
+</html>

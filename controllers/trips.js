@@ -93,16 +93,18 @@ router.get('/:id/show', (req, res) => {
 // user trips
 
 router.get('/user', (req, res) => {
+  console.log(req.session.currentUser);
+  let usersession = req.session.currentUser;
+
   Trip.find({
-    username: req.session.currentUser
+    username: usersession.username
   }, (err, trip) => {
-    if (err) {
-      res.send('you cant see this')
-    } else if (req.session.currentUser) {
-      res.render('trips/user.ejs', {
-        trip: trip
-      });
-    }
+
+    res.render('trips/user.ejs', {
+      trip: trip,
+      currentUser: req.session.currentUser
+    });
+
   })
 });
 

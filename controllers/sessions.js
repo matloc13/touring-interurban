@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
       req.session.currentUser = user;
       res.redirect('/');
     } else {
-      res.send('wrong password')
+      res.redirect('/');
     }
   })
 });
