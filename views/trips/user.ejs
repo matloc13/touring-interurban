@@ -39,9 +39,9 @@
             <strong>Destination</strong>  <%= ele.destination %>
            </div>
 
-<form class="" action="/trips/<%= ele.id %>/edit/favorite?_method=PUT" method="POST">
-<label for="favorite">
-  <input type="checkbox" name="favorite" id="favorite"
+<form class="" action="/trips/<%= ele[index] %>/edit/favorite?_method=PUT" method="POST">
+<label for="favorite<%=[index]%>">
+  <input type="checkbox" name="favorite" id="favorite<%=[index]%>"
   <% if(ele.favorite === true){%>
     checked
   <%}%>
