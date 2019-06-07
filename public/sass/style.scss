@@ -121,7 +121,8 @@ h6 {
 }
 
 .tripItem {
-  border: 1px solid $primary-color-dark;
+  // border-top: 3px solid $primary-color-dark;
+  box-shadow: 1px 0 3px $primary-color-light;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 3%;

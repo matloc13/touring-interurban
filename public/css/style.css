@@ -110,7 +110,7 @@ h6 {
 }
 
 .tripItem {
-  border: 1px solid #711d14;
+  box-shadow: 1px 0 3px #dd5042;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 3%;

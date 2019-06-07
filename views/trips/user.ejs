@@ -26,7 +26,7 @@
 
       <% trip.forEach((ele, index)=> {%>
         <li class="">
-
+<a href="/trips/<%= ele.id %>/show">
           <div class="tripItem">
            <div class="tripItemValue">
             <strong><%= ele.username %>'s time</strong>
@@ -39,9 +39,19 @@
             <strong>Destination</strong>  <%= ele.destination %>
            </div>
 
+<form class="" action="/trips/<%= ele.id %>/edit/favorite?_method=PUT" method="POST">
+<label for="favorite">
+  <input type="checkbox" name="favorite" id="favorite"
+  <% if(ele.favorite === true){%>
+    checked
+  <%}%>
+  />
+  <span>favorite</span>
+  </label>
+</form>
 
           </div>
-
+        </a>
         </li>
       <%})%>
         </ul>

@@ -13,7 +13,22 @@
         <input type="hidden" name="origin" value="<%= trip.origin %>"/>
         <input type="hidden" name="destination" value="<%= trip.destination %>"/>
         <input type="hidden" name="yourTime" value="<%= trip.yourTime %>"/>
-        <textarea name="description"><%= trip.description %></textarea>
+
+          <label for="favorite">
+
+          <input type="checkbox" name="favorite"  id="favorite" <% if(trip.favorite === true){%>
+            checked
+          <%}%>
+          />
+          <span>favorite</span>
+          </label>
+
+
+        <label for="description">
+
+        <textarea name="description" id="description"><%= trip.description %></textarea>
+
+        </label>
         <input class="btn" type="submit" name="" value="Publish">
       </fieldset>
 

@@ -9,16 +9,20 @@ const Trip = require('../models/trips');
 
 // index of trips
 router.get('/', (req, res) => {
-  Trip.find({}, (err, trips) => {
-    if (req.session.currentUser) {
-      res.render('trips/index.ejs', {
-        currentUser: req.session.currentUser,
-        trip: trips
-      });
-    } else {
-      res.redirect('/sessions/new');
-    }
-  })
+  Trip.find({
+      favorite: true
+    },
+
+    (err, trips) => {
+      if (req.session.currentUser) {
+        res.render('trips/index.ejs', {
+          currentUser: req.session.currentUser,
+          trip: trips
+        });
+      } else {
+        res.redirect('/sessions/new');
+      }
+    })
 
 
 });
@@ -34,6 +38,7 @@ router.get('/new', (req, res) => {
 // start trip
 
 router.post('/', (req, res) => {
+
 
   Trip.create(req.body, (err, newRoute) => {
     if (err) {
@@ -51,6 +56,8 @@ router.post('/', (req, res) => {
 // edit trip description
 
 router.get('/:id/edit/description', (req, res) => {
+
+
   Trip.findById(req.params.id, req.body, (err, trip) => {
     if (err) {
       console.log('cannot find');
@@ -63,6 +70,7 @@ router.get('/:id/edit/description', (req, res) => {
 });
 
 router.get('/:id/edit', (req, res) => {
+
   Trip.findById(req.params.id, req.body, (err, trip) => {
     if (err) {
       res.send('did not save');
@@ -97,23 +105,55 @@ router.get('/user', (req, res) => {
   let usersession = req.session.currentUser;
 
   Trip.find({
-    username: usersession.username
-  }, (err, trip) => {
+      username: usersession.username,
+      yourTime: {
+        $gte: 120
 
-    res.render('trips/user.ejs', {
-      trip: trip,
-      currentUser: req.session.currentUser
-    });
+      }
+    },
+    (err, trip) => {
+      res.render('trips/user.ejs', {
+        trip: trip,
+        currentUser: req.session.currentUser
+      });
 
-  })
+    })
 });
 
 // edit prevoius trip description
 
 router.put('/:id/edit/description', (req, res) => {
+  console.log(req.body);
+  if (req.body.favorite === 'on' || req.body.favorite === true) {
+    req.body.favorite = true;
+  } else {
+    req.body.favorite = false;
+  }
   Trip.findByIdAndUpdate(req.params.id, req.body, {
     $set: {
-      description: req.params.description
+      description: req.params.description,
+      favorite: req.body.favorite
+    }
+  }, (err, tripDescription) => {
+    if (err) {
+      res.send('did not update')
+    } else {
+      res.redirect('/trips');
+    }
+
+  })
+});
+
+router.put('/:id/edit/favorite', (req, res) => {
+  console.log(req.body);
+  if (req.body.favorite === 'on' || req.body.favorite === true) {
+    req.body.favorite = true;
+  } else {
+    req.body.favorite = false;
+  }
+  Trip.findByIdAndUpdate(req.params.id, req.body, {
+    $set: {
+      favorite: req.body.favorite
     }
   }, (err, tripDescription) => {
     if (err) {
@@ -128,10 +168,12 @@ router.put('/:id/edit/description', (req, res) => {
 // save trip
 
 router.put('/:id/edit', (req, res) => {
+
   Trip.findByIdAndUpdate(req.params.id, req.body, {
     $set: {
       description: req.params.description,
-      yourTime: req.param.yourTime
+      yourTime: req.params.yourTime
+
     }
   }, (err, trip) => {
     if (err) {
