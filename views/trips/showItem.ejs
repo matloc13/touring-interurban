@@ -15,13 +15,11 @@
 
     <ul>
       <li>
-        <li>
-      <h3>Name: <%= trip.username %></h3>
-      </li>
+        <h3><%= trip.title %></h3>
       <li>
         <% let formTime = trip.yourTime; %>
 
-      <h3 class="yourTime"> <%= formTime %> </h3>
+      <h4 class="yourTime"> <%= formTime %> </h4>
 
       </li>
       <li>
@@ -30,6 +28,9 @@
       <li>
       <h5>To: <%= trip.destination %></h5>
       </li>
+      <li>
+    <h6>Name: <%= trip.username %></h6>
+    </li>
       </div>
 
       <% if (currentUser.username === trip.username) { %>
@@ -43,10 +44,11 @@
 
       <%}%>
     </li>
-    </ul>
     <div class="card-content">
       <p><%= trip.description %></p>
     </div>
+    </ul>
+
 
 </div>
 

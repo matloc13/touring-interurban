@@ -6,34 +6,37 @@
   <body>
 
 <div class="editRoute ">
-<div class="container">
+  <div class="container">
 
-    <form class="editDescription" action="/trips/<%= trip.id %>/edit/description?_method=PUT" method="POST">
-      <fieldset>
-        <input type="hidden" name="origin" value="<%= trip.origin %>"/>
-        <input type="hidden" name="destination" value="<%= trip.destination %>"/>
-        <input type="hidden" name="yourTime" value="<%= trip.yourTime %>"/>
+        <form class="editDescription" action="/trips/<%= trip.id %>/edit/description?_method=PUT" method="POST">
+          <fieldset>
+            <input type="hidden" name="origin" value="<%= trip.origin %>"/>
+            <input type="hidden" name="destination" value="<%= trip.destination %>"/>
+            <input type="hidden" name="yourTime" value="<%= trip.yourTime %>"/>
 
-          <label for="favorite">
+              <label for="favorite">
+              <input type="checkbox" name="favorite"  id="favorite" <% if(trip.favorite === true){%>
+                checked
+              <%}%>
+              />
+              <span>make public</span>
+              </label>
 
-          <input type="checkbox" name="favorite"  id="favorite" <% if(trip.favorite === true){%>
-            checked
-          <%}%>
-          />
-          <span>favorite</span>
-          </label>
+              <label for="title">
+              <input type="text" name="title" value="<%= trip.title %>" id="title"/>
+              <span>Add Title</span>
+              </label>
 
-
-        <label for="description">
-
-        <textarea name="description" id="description"><%= trip.description %></textarea>
-
-        </label>
-        <input class="btn" type="submit" name="" value="Publish">
-      </fieldset>
-
-    </form>
-</div>
+            <label for="description">
+            <textarea name="description" id="description"><%= trip.description %></textarea>
+            <span>Edit Tale</span>
+            </label>
+          </fieldset>
+          <fieldset>
+            <input class="btn" type="submit" name="" value="Publish">
+          </fieldset>
+        </form>
+      </div>
     </div>
 
   </body>

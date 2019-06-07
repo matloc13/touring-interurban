@@ -42,7 +42,7 @@ router.post('/', (req, res) => {
 
   Trip.create(req.body, (err, newRoute) => {
     if (err) {
-      console.log('something is not rtihr');
+      console.log('something is not right');
     } else {
       console.log(newRoute);
       res.render('trips/progress.ejs', {
@@ -132,7 +132,8 @@ router.put('/:id/edit/description', (req, res) => {
   Trip.findByIdAndUpdate(req.params.id, req.body, {
     $set: {
       description: req.params.description,
-      favorite: req.body.favorite
+      favorite: req.body.favorite,
+      title: req.params.title
     }
   }, (err, tripDescription) => {
     if (err) {

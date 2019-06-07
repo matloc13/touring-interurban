@@ -1,7 +1,12 @@
 const mongoose = require('mongoose');
+const User = require('./users')
 
-const routeSchema = new mongoose.Schema({
+const tripSchema = new mongoose.Schema({
   username: String,
+  user: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
   origin: {
     type: String,
     required: false
@@ -9,7 +14,8 @@ const routeSchema = new mongoose.Schema({
   destination: String,
   yourTime: Number,
   description: String,
-  favorite: Boolean
+  favorite: Boolean,
+  title: String
 
 }, {
   timestamps: true
@@ -17,7 +23,7 @@ const routeSchema = new mongoose.Schema({
 
 
 
-const Trip = mongoose.model('Trip', routeSchema);
+const Trip = mongoose.model('Trip', tripSchema);
 
 
 
