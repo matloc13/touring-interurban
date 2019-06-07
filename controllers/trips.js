@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const moment = require('moment');
 
 const User = require('../models/users');
 const Trip = require('../models/trips');
@@ -82,7 +83,8 @@ router.get('/:id/show', (req, res) => {
     } else {
       res.render('trips/showItem.ejs', {
         trip: tripItem,
-        currentUser: req.session.currentUser
+        currentUser: req.session.currentUser,
+        moment: moment
       });
     }
   })

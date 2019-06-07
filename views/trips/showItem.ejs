@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ../partials/head %>
+    <script src="/static.js" charset="utf-8"></script>
   </head>
   <body>
     <nav>
@@ -18,7 +19,10 @@
       <h3>Name: <%= trip.username %></h3>
       </li>
       <li>
-      <h3 class="yourTime"> <%= trip.yourTime %> </h3>
+        <% let formTime = trip.yourTime; %>
+
+      <h3 class="yourTime"> <%= formTime %> </h3>
+
       </li>
       <li>
       <h5>From: <%= trip.origin %></h5>
@@ -30,7 +34,6 @@
 
       <% if (currentUser.username === trip.username) { %>
       <div class="card-content">
-
 
         <a href="/trips/<%= trip.id %>/edit/description" class="navtbtn left">edit tale</a>
         <form class="reveal right" action="/trips/<%= trip.id %>?_method=DELETE" method="POST">
@@ -46,5 +49,6 @@
     </div>
 
 </div>
+
   </body>
 </html>

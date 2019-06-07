@@ -14,6 +14,7 @@ const mongoURI = process.env.MONGODB_URI ||
 require('dotenv').config();
 
 const methodOverride = require('method-override');
+const moment = require('moment');
 const tripsController = require('./controllers/trips');
 const usersController = require('./controllers/users');
 const sessionsController = require('./controllers/sessions');

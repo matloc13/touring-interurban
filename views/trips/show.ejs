@@ -20,9 +20,8 @@
      <% let time = trip.updatedAt - trip.createdAt %>
      <% time = Math.floor(time/1000);%>
        <span>
-         Your Time:</span>
-       <h2 class="yourTime"> <%= time %> </h2><span>seconds</span>
-       <h3 ><%=trip.yourTime %></h3>
+         Your Time:</span><h2 class="yourTime"> <%= time %> </h2><span>seconds</span>
+
        <p><%= trip.description %></p>
     </div>
 

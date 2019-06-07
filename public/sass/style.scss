@@ -106,8 +106,6 @@ h6 {
 }
 
 
-
-
 //Index
 
 .indexNavWrap {
@@ -122,15 +120,12 @@ h6 {
 
 }
 
-
-
 .tripItem {
   border: 1px solid $primary-color-dark;
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 3%;
   margin:1%;
-
 
   .tripItemValue {
     padding:2%;
