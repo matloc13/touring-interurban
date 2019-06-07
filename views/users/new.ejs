@@ -5,10 +5,20 @@
   </head>
   <body>
     <h1>Create User</h1>
+    <nav>
+      <ul>
+        <li>
+        <button type="button" name="button" class="btn-flat"><a href="/sessions/new">Login</a> </button>
+        </li>
+      </ul>
+    </nav>
+    <div class="container">
+
+
 
     <form class="newUserForm" action="/users" method="POST">
       <fieldset>
-        <legend>New Account</legend>
+        <legend>Create User</legend>
           <label for="username">Username</label>
           <input type="text" name="username" id="username" placeholder="username"/>
           <label for="password">Password</label>
@@ -18,5 +28,6 @@
 
 
     </form>
+    </div>
   </body>
 </html>
