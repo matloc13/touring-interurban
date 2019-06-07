@@ -90,6 +90,22 @@ router.get('/:id/show', (req, res) => {
   })
 });
 
+// user trips
+
+router.get('/user', (req, res) => {
+  Trip.find({
+    username: req.session.currentUser
+  }, (err, trip) => {
+    if (err) {
+      res.send('you cant see this')
+    } else if (req.session.currentUser) {
+      res.render('trips/user.ejs', {
+        trip: trip
+      });
+    }
+  })
+});
+
 // edit prevoius trip description
 
 router.put('/:id/edit/description', (req, res) => {
