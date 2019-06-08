@@ -7,19 +7,14 @@
 //font
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,600&display=swap');
 @import 'nav';
+@import 'footer';
 
 
 
 body {
   font-family: $primary-font;
 }
-li {
-  list-style: none;
-}
 
-a {
-  text-decoration: none;
-}
 
 // title
 
@@ -33,7 +28,6 @@ a {
 
   }
 }
-
 
 
 
@@ -72,7 +66,7 @@ a {
 
 .index {
   display: grid;
-  grid-template-columns: 2fr 6fr .1fr;
+  grid-template-columns: 3fr 8fr .1fr;
   width: 100%;
 
 }
@@ -100,7 +94,6 @@ a {
 
 }
 
-
 .ridebtn {
   margin: 10px 0 3px 10px;
   // top:-10;
@@ -114,7 +107,7 @@ a {
   }
 }
 .startBtn {
-  margin-top: 25px;
+  margin: 28px 0 6px;
 }
 
 // progress
@@ -137,8 +130,12 @@ a {
 
 .sidenavcontent {
   height: 100%;
-  background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
+  // background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
+  background-image: url(https://media1.tenor.com/images/2d8791f73c37a70713ab2b7234c36aba/tenor.gif?itemid=11494451);
+  // background-image: url(https://giphy.com/gifs/bike-cycling-fixie-ywADVPv2NitJC);
   background-size: cover;
+  background-position: center;
+  // opacity:.3;
 }
 
 .editRoute {
