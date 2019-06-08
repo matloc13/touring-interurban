@@ -26,9 +26,9 @@
 }
 
  @keyframes colorchange {
-  0% {background-color: $secondary-color-light;}
-  25% {background-color: $primary-color-light;}
-  50% {background-color: $primary-color; }
-  75% {background-color: $tertiary-color-light;}
-  100% {background-color: $secondary-color-light;}
+  0% {background-color: $tertiary-color-light;}
+  25% {background-color: $secondary-color-light;}
+  50% {background-color: $primary-color-light; }
+  75% {background-color: $primary-color;}
+  100% {background-color: $tertiary-color-light;}
 }

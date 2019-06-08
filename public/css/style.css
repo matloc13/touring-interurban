@@ -18,19 +18,19 @@ ol {
 
 @keyframes colorchange {
   0% {
-    background-color: #e4d767;
-  }
-  25% {
-    background-color: #dd5042;
-  }
-  50% {
-    background-color: #B22E20;
-  }
-  75% {
     background-color: #d4d6f8;
   }
-  100% {
+  25% {
     background-color: #e4d767;
+  }
+  50% {
+    background-color: #dd5042;
+  }
+  75% {
+    background-color: #B22E20;
+  }
+  100% {
+    background-color: #d4d6f8;
   }
 }
 nav {
