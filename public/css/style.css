@@ -33,28 +33,6 @@ ol {
     background-color: #e4d767;
   }
 }
-body {
-  font-family: "Dosis", sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-.showtitle {
-  background-color: #dd5042;
-  height: 100%;
-  color: #f2f0ef;
-}
-.showtitle h6 {
-  margin: 0;
-  padding: 5px;
-}
-
 nav {
   font-family: "Dosis", sans-serif;
   background-color: #B22E20;
@@ -92,6 +70,28 @@ nav li input[type=submit] {
 nav button {
   box-shadow: -2px 3px #711d14;
   text-transform: none;
+}
+
+body {
+  font-family: "Dosis", sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.showtitle {
+  background-color: #dd5042;
+  height: 100%;
+  color: #f2f0ef;
+}
+.showtitle h6 {
+  margin: 0;
+  padding: 5px;
 }
 
 .welcomeBack {
@@ -147,6 +147,9 @@ nav button {
 }
 .ridebtn a {
   color: #302e2d;
+}
+.ridebtn button {
+  box-shadow: -2px 3px #711d14;
 }
 
 .startBtn {

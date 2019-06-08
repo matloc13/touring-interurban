@@ -1,0 +1,13 @@
+$light-text: #f2f0ef;
+$dark-text: #302e2d;
+$primary-color: #B22E20;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+$secondary-color: #827717;
+$secondary-color-light: lighten($secondary-color, 35%);
+$tertiary-color: #3B44DF ;
+$tertiary-color-light: lighten($tertiary-color, 35%);
+$tertiary-color-dark: darken($tertiary-color, 35%);
+
+$primary-font: 'Dosis', sans-serif;
+$box-shadow: -2px 3px $primary-color-dark;

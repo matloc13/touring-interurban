@@ -1,0 +1,34 @@
+@import 'variables';
+
+@mixin keyframe ($animation-name) {
+  @-webkit-keyframes #{$animation-name}
+    @content;
+  @-moz-keyframes #{$animation-name}
+    @content;
+  @keyframes #{$animation-name}
+    @content;
+
+}
+
+@mixin animation ($animation, $duration, $transition, $iteration){
+  -webkit-animation-name: $animation;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $transition;
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-name: $animation;
+  -moz-animation-duration: $duration;
+  -moz-animation-transition: $transition;
+  -moz-animation-iteration-count: $iteration;
+  animation-name: $animation;
+  animation-duration: $duration;
+  animation-timing-function: $transition;
+  animation-iteration-count: $iteration;
+}
+
+ @keyframes colorchange {
+  0% {background-color: $secondary-color-light;}
+  25% {background-color: $primary-color-light;}
+  50% {background-color: $primary-color; }
+  75% {background-color: $tertiary-color-light;}
+  100% {background-color: $secondary-color-light;}
+}

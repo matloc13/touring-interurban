@@ -1,0 +1,47 @@
+nav {
+  font-family: $primary-font;
+  background-color: $primary-color;
+  .navtbtn {
+    margin: 0 3%;
+    // border-radius: 0;
+  height: 60%;
+    // display: inline-block;
+  }
+  a {
+    align-self: baseline;
+    color: $primary-color-light;
+    text-decoration: none;
+
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    margin: 0 3%;
+  }
+  .hi {
+    display: inline-flex;
+    margin: 7px;
+
+  }
+
+  li {
+    align-self: baseline;
+    padding: 3% .5%;
+
+    input[type=submit] {
+      // border-radius: 0;
+      color: $dark-text;
+      text-transform: none;
+      margin-right: 10%;
+      box-shadow: $box-shadow;
+      align-self: baseline;
+    }
+  }
+  button {
+    // border-radius: 0;
+    box-shadow: $box-shadow;
+    text-transform: none;
+  }
+
+}

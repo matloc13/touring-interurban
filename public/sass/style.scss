@@ -1,64 +1,13 @@
-
+// normalize
 @import 'reset';
-
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,600&display=swap');
-
-
-
+// animation
+@import 'animation';
 // colors
-$light-text: #f2f0ef;
-$dark-text: #302e2d;
-$primary-color: #B22E20;
-$primary-color-light: lighten($primary-color, 15%);
-$primary-color-dark: darken($primary-color, 15%);
-$secondary-color: #827717;
-$secondary-color-light: lighten($secondary-color, 35%);
-$tertiary-color: #3B44DF ;
-$tertiary-color-light: lighten($tertiary-color, 35%);
-$tertiary-color-dark: darken($tertiary-color, 35%);
+@import 'variables';
+//font
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,600&display=swap');
+@import 'nav';
 
-$primary-font: 'Dosis', sans-serif;
-
-// @mixin keyframe ($background-color-change) {
-//   0% {background-color: $secondary-color-light;}
-//   25% {background-color: $primary-color-light;}
-//   50% {background-color: $primary-color; }
-//   75% {background-color: $tertiary-color-light}
-//   100 {background-color: $secondary-color-light;}
-// }
-
-@mixin keyframe ($animation-name) {
-  @-webkit-keyframes #{$animation-name}
-    @content;
-  @-moz-keyframes #{$animation-name}
-    @content;
-  @keyframes #{$animation-name}
-    @content;
-
-}
-
-@mixin animation ($animation, $duration, $transition, $iteration){
-  -webkit-animation-name: $animation;
-  -webkit-animation-duration: $duration;
-  -webkit-animation-timing-function: $transition;
-  -webkit-animation-iteration-count: $iteration;
-  -moz-animation-name: $animation;
-  -moz-animation-duration: $duration;
-  -moz-animation-transition: $transition;
-  -moz-animation-iteration-count: $iteration;
-  animation-name: $animation;
-  animation-duration: $duration;
-  animation-timing-function: $transition;
-  animation-iteration-count: $iteration;
-}
-
- @keyframes colorchange {
-  0% {background-color: $secondary-color-light;}
-  25% {background-color: $primary-color-light;}
-  50% {background-color: $primary-color; }
-  75% {background-color: $tertiary-color-light;}
-  100% {background-color: $secondary-color-light;}
-}
 
 
 body {
@@ -67,7 +16,6 @@ body {
 li {
   list-style: none;
 }
-
 
 a {
   text-decoration: none;
@@ -86,56 +34,10 @@ a {
   }
 }
 
-// nav
 
-nav {
-  font-family: $primary-font;
-  background-color: $primary-color;
-  .navtbtn {
-    margin: 0 3%;
-    // border-radius: 0;
-  height: 60%;
-    // display: inline-block;
-  }
-  a {
-    align-self: baseline;
-    color: $primary-color-light;
-    text-decoration: none;
 
-  }
-  ul {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    margin: 0 3%;
-  }
-  .hi {
-    display: inline-flex;
-    margin: 7px;
 
-  }
-
-  li {
-    align-self: baseline;
-    padding: 3% .5%;
-
-    input[type=submit] {
-      // border-radius: 0;
-      color: $dark-text;
-      text-transform: none;
-      margin-right: 10%;
-      box-shadow: -2px 3px $primary-color-dark;
-      align-self: baseline;
-    }
-  }
-  button {
-    // border-radius: 0;
-    box-shadow: -2px 3px $primary-color-dark;
-    text-transform: none;
-  }
-
-}
-
+// opening screen
 
 .welcomeBack {
   width: 100vw;
@@ -200,8 +102,12 @@ nav {
   margin: 10px 0 3px 10px;
   // top:-10;
   width: 100%;
+
   a {
-    color:$dark-text;
+    color: $dark-text;
+  }
+  button {
+    box-shadow: $box-shadow;
   }
 }
 .startBtn {
