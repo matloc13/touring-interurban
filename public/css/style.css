@@ -172,6 +172,10 @@ body {
   font-weight: 600;
 }
 
+.fav {
+  background-color: #d4d6f8;
+}
+
 .ridebtn {
   margin: 10px 0 3px 10px;
   width: 100%;
@@ -220,6 +224,18 @@ body {
 
 .editRoute {
   width: 100%;
+}
+
+@media (max-width: 411px) {
+  .index {
+    display: grid;
+    grid-template-columns: 0.1fr 8fr 0.1fr;
+    width: 100%;
+  }
+
+  .sidenavcontent {
+    background-image: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

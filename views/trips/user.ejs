@@ -20,8 +20,9 @@
       <div class="infoTop">
         <table>
           <tr>
-            <th><%= currentUser.username %>'s Trips'</th> 
-
+            <th>
+              <%= currentUser.username %>'s Trips'
+            </th>
           </tr>
 
         </table>
@@ -31,9 +32,15 @@
       <ul>
 
       <% trip.forEach((ele, index)=> {%>
-        <li class="">
+        <li>
+
 <a href="/trips/<%= ele.id %>/show">
-          <div class="tripItem">
+          <div class="tripItem <% if (ele.favorite === true) {%>
+            fav
+          <%}%>">
+          <!-- <div class="tripItem fav"> -->
+
+
            <div class="tripItemValue">
             <strong><%= ele.username %>'s time</strong>
             <span><%= ele.yourTime %></span>

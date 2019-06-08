@@ -22,13 +22,18 @@
         <li><%= trip.username %></li>
         <li><strong>From:</strong> <%= trip.origin %></li>
         <li><strong>To:</strong> <%= trip.destination %></li>
-      </ul>
+
      <% let time = trip.updatedAt - trip.createdAt %>
      <% time = Math.floor(time/1000);%>
-       <span>
-         Your Time:</span><h2 class="yourTime"> <%= time %> </h2><span>seconds</span>
+        <li>
+         <span>
+           Your Time:</span><h2 class="yourTime"> <%= time %> </h2>
+        </li>
+        <li>
+          <p><%= trip.description %></p>
+        </li>
 
-       <p><%= trip.description %></p>
+       </ul>
        </div>
     </div>
 

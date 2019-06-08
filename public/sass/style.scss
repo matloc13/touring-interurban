@@ -93,6 +93,9 @@ body {
 
 
 }
+.fav{
+  background-color: $tertiary-color-light;
+}
 
 .ridebtn {
   margin: 10px 0 3px 10px;
@@ -141,4 +144,16 @@ body {
 .editRoute {
   width: 100%;
 
+}
+
+@media (max-width: 411px) {
+  .index {
+    display: grid;
+    grid-template-columns: .1fr 8fr .1fr;
+    width: 100%;
+
+  }
+  .sidenavcontent {
+    background-image: none;
+  }
 }

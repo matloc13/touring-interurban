@@ -10,11 +10,14 @@ router.get('/new', (req, res) => {
   res.render('users/new.ejs');
 });
 
-// router.get('/edit', (req, res) => {
-//   res.render('users/edit.ejs', {
-//     currentUser: req.session.currentUser,
-//     user: req.body
-//   });
+// router.get('/:id/edit', (req, res) => {
+//   User.findById(req.params.id, req.body, (err, updateUser) => {
+//     res.render('users/edit.ejs', {
+//       currentUser: req.session.currentUser,
+//       user: req.body
+//     });
+//   })
+//
 // });
 router.post('/', (req, res) => {
   req.body.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10));
@@ -27,7 +30,9 @@ router.post('/', (req, res) => {
 
 // router.put('/edit', (req, res) => {
 //   User.findByIdAndUpdate(req.body.id, req.body, {
-//     upsert: true
+//     $set {
+//       img: req.body.img
+//     }
 //   }, (err, user) => {
 //     res.redirect('/');
 //   })

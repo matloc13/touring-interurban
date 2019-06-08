@@ -160,7 +160,7 @@ router.put('/:id/edit/favorite', (req, res) => {
     if (err) {
       res.send('did not update')
     } else {
-      res.redirect('/trips');
+      res.redirect('/trips/user');
     }
 
   })
@@ -181,7 +181,7 @@ router.put('/:id/edit', (req, res) => {
       console.log('not saved');
     } else {
       // res.send(req.body)
-      res.redirect('/trips');;
+      res.redirect('/trips/user');;
     }
   })
 });

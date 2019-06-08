@@ -1,4 +1,5 @@
 # touring-interurban
+- Matthew Lockdall
 
 #### site url
 [touring-interurban](https://touring-interurban.herokuapp.com/)
@@ -9,21 +10,19 @@
 ![wireframe-part2](/assets/IMG_3204.jpeg)
 
 
-### calculate a bicycle journey
-
-- use date object to find time to destination, race against previous times
-- user can create and edit user info.  image of bike array of favorite routes
-
 ### user stories
 
 - user can use app to measure distance of a trip in time
 - user can add a description route stating if it was safe or a good or bad ride
 - user can share favorite rides to public board
+- user can create and edit user info.  
+
 
 ### part two
 
 - add google geocoding, distanceMatrix, and geolocaton api
-- second object to hold important google response data
+- second object to hold relevant google response data
+  - location lat lang and distance matrix ; time to destination estimation.
 - user will be referenced in both models, user trip will ref matching google updatedAt
 - store google api geocoding response for start and end values
 

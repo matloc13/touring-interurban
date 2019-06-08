@@ -4,12 +4,18 @@
     <% include ../partials/head %>
   </head>
   <body>
-    <form action="/users/edit?_method=PUT" method="POST">
-      <input type="hidden"  value="<%= currentUser.username %>">
-      <input type="hidden"  value="<%= currentUser.password %>">
-      <!-- <input type="text" name="img" placeholder="img url"> -->
-      <input type="submit"  value="update">
-    </form>
+    <div class="container">
+      <form action="/users/edit?_method=PUT" method="POST">
+        <input type="hidden"  value="<%= currentUser.username %>">
+        <input type="hidden"  value="<%= currentUser.password %>">
+        <label for="img">
+        <input type="text" name="img" placeholder="img url" id="img">
+        <span>Add an Image</span>
+        </label>
+        <input type="submit"  value="update">
+      </form>
+    </div>
+
 
   </body>
 </html>
