@@ -3,6 +3,8 @@
 
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,600&display=swap');
 
+
+
 // colors
 $light-text: #f2f0ef;
 $dark-text: #302e2d;
@@ -11,8 +13,53 @@ $primary-color-light: lighten($primary-color, 15%);
 $primary-color-dark: darken($primary-color, 15%);
 $secondary-color: #827717;
 $secondary-color-light: lighten($secondary-color, 35%);
+$tertiary-color: #3B44DF ;
+$tertiary-color-light: lighten($tertiary-color, 35%);
+$tertiary-color-dark: darken($tertiary-color, 35%);
 
 $primary-font: 'Dosis', sans-serif;
+
+// @mixin keyframe ($background-color-change) {
+//   0% {background-color: $secondary-color-light;}
+//   25% {background-color: $primary-color-light;}
+//   50% {background-color: $primary-color; }
+//   75% {background-color: $tertiary-color-light}
+//   100 {background-color: $secondary-color-light;}
+// }
+
+@mixin keyframe ($animation-name) {
+  @-webkit-keyframes #{$animation-name}
+    @content;
+  @-moz-keyframes #{$animation-name}
+    @content;
+  @keyframes #{$animation-name}
+    @content;
+
+}
+
+@mixin animation ($animation, $duration, $transition, $iteration){
+  -webkit-animation-name: $animation;
+  -webkit-animation-duration: $duration;
+  -webkit-animation-timing-function: $transition;
+  -webkit-animation-iteration-count: $iteration;
+  -moz-animation-name: $animation;
+  -moz-animation-duration: $duration;
+  -moz-animation-transition: $transition;
+  -moz-animation-iteration-count: $iteration;
+  animation-name: $animation;
+  animation-duration: $duration;
+  animation-timing-function: $transition;
+  animation-iteration-count: $iteration;
+}
+
+ @keyframes colorchange {
+  0% {background-color: $secondary-color-light;}
+  25% {background-color: $primary-color-light;}
+  50% {background-color: $primary-color; }
+  75% {background-color: $tertiary-color-light;}
+  100% {background-color: $secondary-color-light;}
+}
+
 
 body {
   font-family: $primary-font;
@@ -20,29 +67,39 @@ body {
 li {
   list-style: none;
 }
-button {
-  // border-radius: 0;
-  box-shadow: -2px 3px $primary-color-dark;
-  text-transform: none;
-}
+
 
 a {
   text-decoration: none;
 }
+
+// title
+
+.showtitle {
+  background-color: $primary-color-light;
+  height: 100%;
+  color: $light-text;
+  h6 {
+    margin: 0;
+    padding: 5px;
+
+  }
+}
+
 // nav
 
 nav {
   font-family: $primary-font;
   background-color: $primary-color;
   .navtbtn {
-    margin:0 3%;
+    margin: 0 3%;
     // border-radius: 0;
-  height:60%;
+  height: 60%;
     // display: inline-block;
   }
   a {
     align-self: baseline;
-    color:$primary-color-light;
+    color: $primary-color-light;
     text-decoration: none;
 
   }
@@ -50,45 +107,40 @@ nav {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
-    margin:0 3%;
+    margin: 0 3%;
   }
   .hi {
     display: inline-flex;
-    margin:7px;
+    margin: 7px;
 
   }
 
   li {
     align-self: baseline;
-    padding:3% .5%;
+    padding: 3% .5%;
 
     input[type=submit] {
       // border-radius: 0;
-      color:$dark-text;
+      color: $dark-text;
       text-transform: none;
       margin-right: 10%;
       box-shadow: -2px 3px $primary-color-dark;
       align-self: baseline;
     }
   }
+  button {
+    // border-radius: 0;
+    box-shadow: -2px 3px $primary-color-dark;
+    text-transform: none;
+  }
 
 }
 
-h6 {
-  margin:0;
-  padding:5px;
-
-}
-.showtitle {
-  background-color: $primary-color-light;
-  height:100%;
-  color:$light-text;
-}
 
 .welcomeBack {
-  width:100vw;
-  height:90vh;
-  position:relative;
+  width: 100vw;
+  height: 90vh;
+  position: relative;
   background-image: url(https://live.staticflickr.com/2815/13740757384_8be0ae27e7_b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -96,11 +148,11 @@ h6 {
 
   .onTop {
     position: absolute;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     z-index: 1;
     opacity: 1;
-    width:100%;
+    width: 100%;
     background-color: white;
   }
 }
@@ -110,7 +162,7 @@ h6 {
 
 .indexNavWrap {
   position: sticky;
-  top:0;
+  top: 0;
 }
 
 .index {
@@ -126,11 +178,15 @@ h6 {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 3%;
-  margin:1.3%;
+  margin: 1.3%;
+
+  &:hover {
+    background-color: $secondary-color-light;
+  }
 
   .tripItemValue {
-    padding:5%;
-    color:$dark-text;
+    padding: 5%;
+    color: $dark-text;
     text-overflow: clip;
     // font-family: $primary-font;
     font-weight: 600;
@@ -138,45 +194,45 @@ h6 {
 
 
 }
-.tripItem:hover {
 
-    background-color: $secondary-color-light;
-
-}
 
 .ridebtn {
-  margin:10px 0 3px 10px;
+  margin: 10px 0 3px 10px;
   // top:-10;
   width: 100%;
   a {
     color:$dark-text;
-
   }
 }
 .startBtn {
-  margin-top:25px;
+  margin-top: 25px;
 }
 
 // progress
 .progWrap {
-  width:100%;
-
+  width: 100%;
 }
 .arrived {
   input {
-    width:100%;
+    width: 100%;
   }
+}
+
+.colorAnimation {
+  @include animation(colorchange, 60s, ease-in, infinite );
+  height:100vh;
+
 }
 
 // sidenavcontent
 
 .sidenavcontent {
-  height:100%;
+  height: 100%;
   background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
   background-size: cover;
 }
 
 .editRoute {
-  width:100%;
+  width: 100%;
 
 }

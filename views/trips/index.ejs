@@ -30,13 +30,14 @@
     <li class="">
       <a href="/trips/<%= ele.id %>/show">
       <div class="tripItem">
+        <div class="tripItemValue">
+         <%= ele.title %>
+        </div>
        <div class="tripItemValue">
         <strong><%= ele.username %>'s time</strong>
         <span><%= ele.yourTime %></span>
        </div>
-       <div class="tripItemValue">
-        <strong>Origin</strong>  <%= ele.origin %>
-       </div>
+
        <div class="tripItemValue">
         <strong>Destination</strong>  <%= ele.destination %>
        </div>

@@ -16,7 +16,15 @@ $(() => {
 
   console.log($('.indexTime'));
 
+  $('.beginCount').on('click', () => {
+    let start = 0;
+    start = date.now();
+  })
 
+  $('.endCount').on('click', () => {
+    let millis = date.now() - start;
+    millis = Math.floor(millis / 1000);
+  })
 
 
 })

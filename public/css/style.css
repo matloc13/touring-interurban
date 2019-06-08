@@ -16,6 +16,23 @@ ol {
   height: 0;
 }
 
+@keyframes colorchange {
+  0% {
+    background-color: #e4d767;
+  }
+  25% {
+    background-color: #dd5042;
+  }
+  50% {
+    background-color: #B22E20;
+  }
+  75% {
+    background-color: #d4d6f8;
+  }
+  100% {
+    background-color: #e4d767;
+  }
+}
 body {
   font-family: "Dosis", sans-serif;
 }
@@ -24,13 +41,18 @@ li {
   list-style: none;
 }
 
-button {
-  box-shadow: -2px 3px #711d14;
-  text-transform: none;
-}
-
 a {
   text-decoration: none;
+}
+
+.showtitle {
+  background-color: #dd5042;
+  height: 100%;
+  color: #f2f0ef;
+}
+.showtitle h6 {
+  margin: 0;
+  padding: 5px;
 }
 
 nav {
@@ -67,16 +89,9 @@ nav li input[type=submit] {
   box-shadow: -2px 3px #711d14;
   align-self: baseline;
 }
-
-h6 {
-  margin: 0;
-  padding: 5px;
-}
-
-.showtitle {
-  background-color: #dd5042;
-  height: 100%;
-  color: #f2f0ef;
+nav button {
+  box-shadow: -2px 3px #711d14;
+  text-transform: none;
 }
 
 .welcomeBack {
@@ -116,15 +131,14 @@ h6 {
   grid-gap: 3%;
   margin: 1.3%;
 }
+.tripItem:hover {
+  background-color: #e4d767;
+}
 .tripItem .tripItemValue {
   padding: 5%;
   color: #302e2d;
   text-overflow: clip;
   font-weight: 600;
-}
-
-.tripItem:hover {
-  background-color: #e4d767;
 }
 
 .ridebtn {
@@ -145,6 +159,22 @@ h6 {
 
 .arrived input {
   width: 100%;
+}
+
+.colorAnimation {
+  -webkit-animation-name: colorchange;
+  -webkit-animation-duration: 60s;
+  -webkit-animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-name: colorchange;
+  -moz-animation-duration: 60s;
+  -moz-animation-transition: ease-in;
+  -moz-animation-iteration-count: infinite;
+  animation-name: colorchange;
+  animation-duration: 60s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  height: 100vh;
 }
 
 .sidenavcontent {

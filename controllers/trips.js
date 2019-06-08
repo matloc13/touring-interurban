@@ -105,11 +105,11 @@ router.get('/user', (req, res) => {
   let usersession = req.session.currentUser;
 
   Trip.find({
-      username: usersession.username,
-      yourTime: {
-        $gte: 120
-
-      }
+      username: usersession.username
+      // yourTime: {
+      //   $gte: 120
+      //
+      // }
     },
     (err, trip) => {
       res.render('trips/user.ejs', {

@@ -3,18 +3,20 @@
   <head>
     <% include ../partials/head %>
   </head>
-  <body>
-    <div class="container progWrap ">
+  <body class="colorAnimation">
+    <div class="container  ">
+
       <div class="progressBar">
         <h2>En Route to <%= trip.destination %>... </h2>
       </div>
       <div class="arrived">
         <form class="stopRoute" action="/trips/<%= trip.id %>?_method=PUT" method="POST">
-          <fieldset>
+          
           <input class="btn" type="submit" value="Arrived!">
-          </fieldset>
+
         </form>
       </div>
+
     </div>
   </body>
 </html>
