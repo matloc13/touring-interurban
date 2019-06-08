@@ -3,7 +3,8 @@ nav {
   background-color: $primary-color;
   .navtbtn {
     margin: 0 3%;
-    // border-radius: 0;
+    border-radius: 10px;
+    background-color: transparent;
   height: 60%;
     // display: inline-block;
   }
