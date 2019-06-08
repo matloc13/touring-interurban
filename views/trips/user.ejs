@@ -13,17 +13,17 @@
       </nav>
     </div>
 
-
+    <div class="indexNavWrap clearfix ridebtn">
+      <button  class="startBtn" type="button" name="button"><a href="/trips/new">Let's Ride</a></button>
+    </div>
     <div class="topInfo">
       <div class="infoTop">
         <table>
           <tr>
-            <th>Username</th>
+            <th><%= currentUser.username %>'s Trips'</th> 
 
           </tr>
-          <tr>
-            <td><%= currentUser.username %></td>
-          </tr>
+
         </table>
       </div>
     </div>
@@ -53,5 +53,8 @@
       <%})%>
         </ul>
     </main>
+    <div class="footerWrap clearfix">
+    <% include ../partials/footer %>
+    </div>
   </body>
 </html>

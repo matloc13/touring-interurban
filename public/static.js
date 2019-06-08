@@ -7,7 +7,7 @@ const secToT = (secs) => {
   let divForSec = divForMin % 60;
   let seconds = Math.ceil(divForSec);
   let time = hr + ':' + min + ':' + seconds
-  return `Your Time: ${time}`
+  return `Time: ${time}`
 }
 
 $(() => {

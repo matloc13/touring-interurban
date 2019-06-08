@@ -139,7 +139,7 @@ router.put('/:id/edit/description', (req, res) => {
     if (err) {
       res.send('did not update')
     } else {
-      res.redirect('/trips');
+      res.redirect('/trips/user');
     }
 
   })

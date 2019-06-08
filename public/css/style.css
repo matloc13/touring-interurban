@@ -7,6 +7,14 @@ ol {
   padding: 0;
 }
 
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -72,16 +80,28 @@ nav button {
   text-transform: none;
 }
 
+.footerWrap {
+  color: #f2f0ef;
+  margin-top: 19%;
+}
+.footerWrap footer {
+  padding: 5%;
+  background-color: #dd5042;
+  height: 30vh;
+}
+.footerWrap footer .grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.footerWrap a {
+  color: #f2f0ef;
+}
+.footerWrap .tit {
+  border-right: 1px solid #f2f0ef;
+}
+
 body {
   font-family: "Dosis", sans-serif;
-}
-
-li {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
 }
 
 .showtitle {
@@ -131,7 +151,7 @@ a {
 
 .index {
   display: grid;
-  grid-template-columns: 2fr 6fr 0.1fr;
+  grid-template-columns: 3fr 8fr 0.1fr;
   width: 100%;
 }
 
@@ -164,11 +184,11 @@ a {
 }
 
 .startBtn {
-  margin-top: 25px;
+  margin: 28px 0 6px;
 }
 
-.progWrap {
-  width: 100%;
+.progressBar {
+  margin-top: 5%;
 }
 
 .arrived input {
@@ -193,8 +213,9 @@ a {
 
 .sidenavcontent {
   height: 100%;
-  background-image: url(https://www.maxpixel.net/static/photo/1x/Urban-Bicycle-City-Commuting-Folding-Bicycle-1864733.jpg);
+  background-image: url(https://media1.tenor.com/images/2d8791f73c37a70713ab2b7234c36aba/tenor.gif?itemid=11494451);
   background-size: cover;
+  background-position: center;
 }
 
 .editRoute {

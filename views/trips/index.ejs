@@ -33,14 +33,17 @@
         <div class="tripItemValue">
          <%= ele.title %>
         </div>
+        <div class="">
+
+        </div>
        <div class="tripItemValue">
         <strong><%= ele.username %>'s time</strong>
         <span><%= ele.yourTime %></span>
        </div>
 
-       <div class="tripItemValue">
+       <!-- <div class="tripItemValue">
         <strong>Destination</strong>  <%= ele.destination %>
-       </div>
+       </div> -->
 
 
       </div>
@@ -50,8 +53,8 @@
     </ul>
   </div>
   </div>
-  <footer>
-
-  </footer>
+  <div class="footerWrap clearfix">
+  <% include ../partials/footer %>
+  </div>
   </body>
 </html>
