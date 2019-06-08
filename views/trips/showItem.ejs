@@ -36,7 +36,7 @@
       <% if (currentUser.username === trip.username) { %>
       <div class="card-content">
 
-        <a href="/trips/<%= trip.id %>/edit/description" class="navtbtn left">edit tale</a>
+        <a href="/trips/<%= trip.id %>/edit/description" class="navtbtn left">make public</a>
         <form class="reveal right" action="/trips/<%= trip.id %>?_method=DELETE" method="POST">
           <input type="submit" value="remove route">
         </form>

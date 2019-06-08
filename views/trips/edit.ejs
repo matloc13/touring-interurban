@@ -2,19 +2,22 @@
 <html lang="en" dir="ltr">
   <head>
     <% include ../partials/head %>
+    <script src="/static.js" charset="utf-8"></script>
   </head>
   <body>
     <% let time = trip.updatedAt - trip.createdAt %>
     <% time = Math.floor(time/1000);%>
     <% timeshow = time %>
-    <div class="container valign-wrapper">
+    <div class="container ">
+
+<div class="card">
 
 
     <ul>
       <li><%= trip.username %></li>
       <li><%= trip.origin %></li>
       <li><%= trip.destination %></li>
-      <li class="yourTime"><%= timeshow %></li>
+      <li class="yourTime"> <%= timeshow %></li>
     </ul>
 
     <form class="editForm" action="/trips/<%= trip.id %>/edit?_method=PUT" method="POST">
@@ -22,18 +25,23 @@
           <input type="hidden" name="origin" value="<%= trip.origin %>"/>
           <input type="hidden" name="destination" value="<%= trip.destination %>"/>
           <input type="hidden" name="yourTime" value="<%= time %>"/>
-      
-          <label for="description">
-
-          <textarea name="description" id="description"></textarea>
+          <label for="title">
+            <input type="text" name="title" id="title">
+            <span>title</span>
           </label>
-        </fieldset><fieldset>
 
+          <label for="description">
+          <textarea name="description" id="description"></textarea>
+          <span>description</span>
+          </label>
+        </fieldset>
+        <fieldset>
 
 
       <input class="btn"type="submit" value="publish">
       </fieldset>
     </form>
+    </div>
     </div>
   </body>
 </html>

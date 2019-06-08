@@ -3,6 +3,9 @@
   <head>
     <% include ../partials/head %>
   </head>
+  <div class="showtitle">
+    <h6>touring interurban</h6>
+  </div>
   <body>
 
     <nav>
@@ -11,8 +14,11 @@
       </ul>
     </nav>
 
-    <div class="container ">
-      <ul>
+    <div class=" container ">
+      <div class="card">
+
+
+      <ul class="card-content ">
         <li><%= trip.username %></li>
         <li>From: <%= trip.origin %></li>
         <li>To: <%= trip.destination %></li>
@@ -23,6 +29,7 @@
          Your Time:</span><h2 class="yourTime"> <%= time %> </h2><span>seconds</span>
 
        <p><%= trip.description %></p>
+       </div>
     </div>
 
   </body>

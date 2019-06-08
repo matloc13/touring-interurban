@@ -46,16 +46,19 @@ a {
   background-image: url(https://live.staticflickr.com/2815/13740757384_8be0ae27e7_b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: .4;
+
 
   .onTop {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
     z-index: 1;
     opacity: 1;
-    width: 100%;
-    background-color: white;
+    padding:1%;
+@include animation(colorchange, 300s, ease-in, infinite );
+    // background-color: white;
+
   }
 }
 
