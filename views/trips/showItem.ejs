@@ -23,10 +23,10 @@
 
       </li>
       <li>
-      <h5>From: <%= trip.origin %></h5>
+      <h5><strong>From:</strong> <%= trip.origin %></h5>
       </li>
       <li>
-      <h5>To: <%= trip.destination %></h5>
+      <h5><strong>To:</strong> <%= trip.destination %></h5>
       </li>
       <li>
     <h6>Name: <%= trip.username %></h6>
@@ -36,7 +36,13 @@
       <% if (currentUser.username === trip.username) { %>
       <div class="card-content">
 
-        <a href="/trips/<%= trip.id %>/edit/description" class="navtbtn left">make public</a>
+
+        <a href="/trips/<%= trip.id %>/edit/description" class="navtbtn left">
+          <% if (trip.favorite === true) { %>
+            edit tale
+          <%}else{%>
+            make public
+          <%}%> </a>
         <form class="reveal right" action="/trips/<%= trip.id %>?_method=DELETE" method="POST">
           <input type="submit" value="remove route">
         </form>

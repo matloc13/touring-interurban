@@ -148,7 +148,7 @@ a {
 .tripItem .tripItemValue {
   padding: 5%;
   color: #302e2d;
-  text-overflow: clip;
+  overflow: ellipsis;
   font-weight: 600;
 }
 

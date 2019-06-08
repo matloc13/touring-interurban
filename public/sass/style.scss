@@ -92,7 +92,7 @@ a {
   .tripItemValue {
     padding: 5%;
     color: $dark-text;
-    text-overflow: clip;
+    overflow: ellipsis;
     // font-family: $primary-font;
     font-weight: 600;
   }

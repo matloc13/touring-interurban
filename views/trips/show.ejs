@@ -20,8 +20,8 @@
 
       <ul class="card-content ">
         <li><%= trip.username %></li>
-        <li>From: <%= trip.origin %></li>
-        <li>To: <%= trip.destination %></li>
+        <li><strong>From:</strong> <%= trip.origin %></li>
+        <li><strong>To:</strong> <%= trip.destination %></li>
       </ul>
      <% let time = trip.updatedAt - trip.createdAt %>
      <% time = Math.floor(time/1000);%>
