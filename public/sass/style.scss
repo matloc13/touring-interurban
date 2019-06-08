@@ -15,7 +15,6 @@ body {
   font-family: $primary-font;
 }
 
-
 // title
 
 .showtitle {
@@ -29,8 +28,6 @@ body {
   }
 }
 
-
-
 // opening screen
 
 .welcomeBack {
@@ -40,7 +37,6 @@ body {
   background-image: url(https://live.staticflickr.com/2815/13740757384_8be0ae27e7_b.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-
 
   .onTop {
     position: absolute;
@@ -56,7 +52,6 @@ body {
   }
 }
 
-
 //Index
 
 .indexNavWrap {
@@ -68,7 +63,6 @@ body {
   display: grid;
   grid-template-columns: 3fr 8fr .1fr;
   width: 100%;
-
 }
 
 .tripItem {
@@ -91,7 +85,6 @@ body {
     font-weight: 600;
   }
 
-
 }
 .fav{
   background-color: $tertiary-color-light;
@@ -109,6 +102,7 @@ body {
     box-shadow: $box-shadow;
   }
 }
+
 .startBtn {
   margin: 28px 0 6px;
 }
@@ -143,7 +137,6 @@ body {
 
 .editRoute {
   width: 100%;
-
 }
 
 @media (max-width: 411px) {
@@ -151,7 +144,6 @@ body {
     display: grid;
     grid-template-columns: .1fr 8fr .1fr;
     width: 100%;
-
   }
   .sidenavcontent {
     background-image: none;

@@ -30,8 +30,10 @@
 - time of trip
 - beginning and ending of trip
 - description of the trip
+- user id
+- favorite trip?
+- google response data id
 
 ### stretch goals
 - connect user to routes models
-- user login
 - stretch goals  use google distance matrix api and geolocation and geocoding api

@@ -207,7 +207,7 @@ router.delete('/:id', (req, res) => {
     if (err) {
       console.log('could not delete');
     } else {
-      res.redirect('/trips');
+      res.redirect('/trips/user');
     }
   })
 });
