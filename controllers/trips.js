@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const moment = require('moment');
+const googleMapsClient = require('@google/maps').createClient({
+  key: process.env.KEY
+});
 
 const User = require('../models/users');
 const Trip = require('../models/trips');
@@ -23,8 +26,6 @@ router.get('/', (req, res) => {
         res.redirect('/sessions/new');
       }
     })
-
-
 });
 
 // new trip
@@ -39,6 +40,14 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
 
+  // Geocode an address.
+  // googleMapsClient.geocode({
+  //   address: req.body.origin
+  // }, (err, response) => {
+  //   if (!err) {
+  //     res.send(response.json.results);
+  //   }
+  // });
 
   Trip.create(req.body, (err, newRoute) => {
     if (err) {
@@ -50,14 +59,11 @@ router.post('/', (req, res) => {
       });
     }
   });
-
 });
 
 // edit trip description
 
 router.get('/:id/edit/description', (req, res) => {
-
-
   Trip.findById(req.params.id, req.body, (err, trip) => {
     if (err) {
       console.log('cannot find');
@@ -116,7 +122,6 @@ router.get('/user', (req, res) => {
         trip: trip,
         currentUser: req.session.currentUser
       });
-
     })
 });
 
@@ -141,7 +146,6 @@ router.put('/:id/edit/description', (req, res) => {
     } else {
       res.redirect('/trips/user');
     }
-
   })
 });
 
@@ -162,7 +166,6 @@ router.put('/:id/edit/favorite', (req, res) => {
     } else {
       res.redirect('/trips/user');
     }
-
   })
 });
 
@@ -174,7 +177,6 @@ router.put('/:id/edit', (req, res) => {
     $set: {
       description: req.params.description,
       yourTime: req.params.yourTime
-
     }
   }, (err, trip) => {
     if (err) {
@@ -189,7 +191,6 @@ router.put('/:id/edit', (req, res) => {
 // stop current trip
 
 router.put('/:id', (req, res) => {
-
   Trip.findByIdAndUpdate(req.params.id, req.body, {
       new: true
     },
@@ -202,6 +203,8 @@ router.put('/:id', (req, res) => {
     })
 });
 
+// destroy trip
+
 router.delete('/:id', (req, res) => {
   Trip.findByIdAndRemove(req.params.id, (err, trip) => {
     if (err) {
@@ -211,7 +214,5 @@ router.delete('/:id', (req, res) => {
     }
   })
 });
-
-
 
 module.exports = router

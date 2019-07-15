@@ -13,6 +13,9 @@ const mongoURI = process.env.MONGODB_URI ||
 
 require('dotenv').config();
 
+const googleMapsClient = require('@google/maps').createClient({
+  key: process.env.KEY
+});
 const methodOverride = require('method-override');
 const moment = require('moment');
 const tripsController = require('./controllers/trips');

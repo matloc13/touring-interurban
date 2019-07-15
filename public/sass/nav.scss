@@ -3,8 +3,8 @@ nav {
   background-color: $primary-color;
   .navtbtn {
     margin: 0 3%;
-    border-radius: 10px;
-    background-color: transparent;
+    // border-radius: 10px;
+    // background-color: transparent;
   height: 60%;
     // display: inline-block;
   }
@@ -12,7 +12,6 @@ nav {
     align-self: baseline;
     color: $primary-color-light;
     text-decoration: none;
-
   }
   ul {
     display: flex;
@@ -23,7 +22,6 @@ nav {
   .hi {
     display: inline-flex;
     margin: 7px;
-
   }
 
   li {

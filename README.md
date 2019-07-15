@@ -22,7 +22,7 @@
 
 - add google geocoding, distanceMatrix, and geolocaton api
 - second object to hold relevant google response data
-  - location lat lang and distance matrix ; time to destination estimation.
+  - location lat lang and distance matrix for time to destination estimation.
 - user will be referenced in both models, user trip will ref matching google updatedAt
 - store google api geocoding response for start and end values
 
@@ -34,6 +34,12 @@
 - favorite trip?
 - google response data id
 
+### dependencies
+- npm express.session
+- npm ejs
+- npm mongoose
+- npm sass
+- npm 
 ### stretch goals
 - connect user to routes models
 - stretch goals  use google distance matrix api and geolocation and geocoding api

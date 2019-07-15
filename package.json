@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/matloc13/touring-interurban#readme",
   "dependencies": {
+    "@google/maps": "^0.5.5",
     "bcrypt": "^3.0.6",
     "dotenv": "^8.0.0",
     "ejs": "^2.6.1",

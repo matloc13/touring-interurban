@@ -47,8 +47,6 @@ nav {
 }
 nav .navtbtn {
   margin: 0 3%;
-  border-radius: 10px;
-  background-color: transparent;
   height: 60%;
 }
 nav a {
